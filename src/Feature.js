@@ -5,7 +5,12 @@ import Checkout from './Checkout';
 import Confirmation from './Confirmation';
 
 // =========== Feauture Component ===========
-const Feature = ({ initialCartItems, categories, pickupTimes, paymentMethods }) => {
+const Feature = ({
+  initialCartItems,
+  categories,
+  pickupTimes,
+  paymentMethods,
+}) => {
   //States
   const [page, setPage] = useState('start');
   const [cartItems, setCartItems] = useState(initialCartItems);
@@ -15,9 +20,33 @@ const Feature = ({ initialCartItems, categories, pickupTimes, paymentMethods }) 
 
   //Helper functions
   const handleCartItemClick = (id) => {
+    //MAYBE I CAN JUST GET RID OF THIS PART AND JUST DO QTY
     const newCartItems = cartItems.map((item) => {
       if (item.id === id) {
         item.selected = !item.selected;
+        if (!item.selected) {
+          item.qty = 0;
+        } else {
+          item.qty = 1;
+        }
+        if (item.qty === 0) {
+          item.selected = false;
+        }
+      }
+      return item;
+    });
+    updateTotal();
+    setCartItems(newCartItems);
+  };
+
+  const updateQty = (operator, id) => {
+    const newCartItems = cartItems.map((item) => {
+      if (item.id === id) {
+        if (operator === '-') {
+          item.qty--;
+        } else if (operator === '+') {
+          item.qty++;
+        }
       }
       return item;
     });
@@ -57,6 +86,7 @@ const Feature = ({ initialCartItems, categories, pickupTimes, paymentMethods }) 
         cartItems={cartItems}
         categories={categories}
         handleCartItemClick={handleCartItemClick}
+        updateQty={updateQty}
         specialRequest={specialRequest}
         setSpecialRequest={setSpecialRequest}
         total={total}

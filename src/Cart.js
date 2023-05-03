@@ -8,6 +8,7 @@ const Cart = ({
   cartItems,
   categories,
   handleCartItemClick,
+  updateQty,
   specialRequest,
   setSpecialRequest,
   total,
@@ -28,8 +29,10 @@ const Cart = ({
             price={item.price}
             selected={item.selected}
             category={item.category}
+            qty={item.qty}
             id={item.id}
             handleCartItemClick={handleCartItemClick}
+            updateQty={updateQty}
             total={total}
             updateTotal={updateTotal}
           />

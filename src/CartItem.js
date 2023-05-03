@@ -6,8 +6,10 @@ const CartItem = ({
   price,
   selected,
   category,
+  qty,
   id,
   handleCartItemClick,
+  updateQty,
   total,
   updateTotal,
 }) => {
@@ -25,6 +27,9 @@ const CartItem = ({
       />
       <label htmlFor={id}>{title} ... </label>
       <span>${price}</span>
+      <button type="button" onClick={() => updateQty('-', id)}>-</button>
+      <span>{qty}</span>
+      <button type="button" onClick={() => updateQty('+', id)}>+</button>
       <br />
     </>
   );
