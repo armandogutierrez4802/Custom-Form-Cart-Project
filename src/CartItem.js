@@ -17,13 +17,18 @@ const CartItem = ({
     handleCartItemClick(id);
   };
 
-  const QtyButtonComponent = () => {
+  const QtyButtons = () => {
     return (
        <>
         <button type="button" onClick={() => updateQty('-', id)}>-</button>
         <span>{qty}</span>
         <button type="button" onClick={() => updateQty('+', id)}>+</button>
       </>);
+  }
+
+  const OptionsList = () => {
+    //return out a dropdown menu with options based on the items category
+    // Ex fillings for all the cake options
   }
 
   return (
@@ -43,7 +48,7 @@ const CartItem = ({
            </>
       ))} */}
       {/* {<QtyButtonComponent/> && qty} */}
-      {(qty)? <QtyButtonComponent/> : ''}
+      {(qty)? <QtyButtons/> : ''}
       {/* <button type="button" onClick={() => updateQty('-', id)}>-</button>
         <span>{qty}</span>
         <button type="button" onClick={() => updateQty('+', id)}>+</button> */}
