@@ -48,6 +48,9 @@ const Feature = ({
         } else if (operator === '+') {
           item.qty++;
         }
+        if (item.qty === 0) {
+          item.selected = false;
+        }
       }
       return item;
     });
