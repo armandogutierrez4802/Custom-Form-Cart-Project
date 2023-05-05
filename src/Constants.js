@@ -10,7 +10,7 @@ const initialCartItems = [
     id: 0,
   },
   {
-    title: 'Sweet Potato Pie',
+    title: 'Sweet Potato Pie (seasonal)',
     price: 16,
     selected: false,
     category: 'pie',
@@ -391,4 +391,10 @@ const paymentMethods = [
   },
 ];
 
-export { initialCartItems, categories, pickupTimes, paymentMethods };
+export {
+  initialCartItems,
+  cakeFillings,
+  categories,
+  pickupTimes,
+  paymentMethods,
+};

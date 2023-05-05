@@ -1,4 +1,5 @@
 import React from 'react';
+import { cakeFillings } from './Constants.js';
 
 // =========== CartItem Component ===========
 const CartItem = ({
@@ -17,23 +18,28 @@ const CartItem = ({
     handleCartItemClick(id);
   };
 
-  const QtyButtons = () => {
-    return (
-       <>
-        <button type="button" onClick={() => updateQty('-', id)}>-</button>
-        <span>{qty}</span>
-        <button type="button" onClick={() => updateQty('+', id)}>+</button>
-      </>);
-  }
+  const qtyButtons = (
+    <>
+      <button type="button" onClick={() => updateQty('-', id)}>
+        -
+      </button>
+      <span>{qty}</span>
+      <button type="button" onClick={() => updateQty('+', id)}>
+        +
+      </button>
+    </>
+  );
 
-  const OptionsList = () => {
+  const optionsList = (
     //return out a dropdown menu with options based on the items category
     // Ex fillings for all the cake options
-  }
+    <></>
+  );
 
   return (
     <>
       <input
+        style={{ display: 'none' }}
         type="checkbox"
         id={id}
         checked={selected || qty}
@@ -41,17 +47,7 @@ const CartItem = ({
       />
       <label htmlFor={id}>{title} ... </label>
       <span>${price}</span>
-      {/* {(qty && (<>
-           <button type="button" onClick={() => updateQty('-', id)}>-</button>
-           <span>{qty}</span>
-           <button type="button" onClick={() => updateQty('+', id)}>+</button>
-           </>
-      ))} */}
-      {/* {<QtyButtonComponent/> && qty} */}
-      {(qty)? <QtyButtons/> : ''}
-      {/* <button type="button" onClick={() => updateQty('-', id)}>-</button>
-        <span>{qty}</span>
-        <button type="button" onClick={() => updateQty('+', id)}>+</button> */}
+      {qty ? qtyButtons : ''}
       <br />
     </>
   );
