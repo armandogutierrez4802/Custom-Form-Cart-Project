@@ -44,10 +44,8 @@ const CartItem = ({
 
       {cakeFillings.map((option) => (
         <>
-          <input type="checkbox" />
-          <label>
-            
-          </label>
+          <input type="checkbox" value={option.value} />
+          <label>{option.title}</label>
         </>
       ))}
     </>
