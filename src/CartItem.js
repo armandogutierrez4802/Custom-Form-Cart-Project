@@ -34,18 +34,12 @@ const CartItem = ({
     //return out a dropdown menu with options based on the items category
     // Ex fillings for all the cake options
     <>
-      <div>Please select a filling for each cake</div>
-      <select name="options" id="options">
-        {cakeFillings.map((option) => (
-          <option value={option.value}>{option.title}</option>
-        ))}
-      </select>
-      <br />
-
+      <div>Please select a cake filling for your {title}</div>
       {cakeFillings.map((option) => (
         <>
           <input type="checkbox" value={option.value} />
           <label>{option.title}</label>
+          <br />
         </>
       ))}
     </>
