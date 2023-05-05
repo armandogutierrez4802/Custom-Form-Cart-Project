@@ -33,13 +33,30 @@ const CartItem = ({
   const optionsList = (
     //return out a dropdown menu with options based on the items category
     // Ex fillings for all the cake options
-    <></>
+    <>
+      <div>Please select a filling for each cake</div>
+      <select name="options" id="options">
+        {cakeFillings.map((option) => (
+          <option value={option.value}>{option.title}</option>
+        ))}
+      </select>
+      <br />
+
+      {cakeFillings.map((option) => (
+        <>
+          <input type="checkbox" />
+          <label>
+            
+          </label>
+        </>
+      ))}
+    </>
   );
 
   return (
     <>
       <input
-        style={{ display: 'none' }}
+        // style={{ display: 'none' }}
         type="checkbox"
         id={id}
         checked={selected || qty}
@@ -49,6 +66,7 @@ const CartItem = ({
       <span>${price}</span>
       {qty ? qtyButtons : ''}
       <br />
+      {qty > 0 && category === 'cake' ? optionsList : ''}
     </>
   );
 };

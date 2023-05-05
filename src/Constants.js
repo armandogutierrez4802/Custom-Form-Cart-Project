@@ -276,10 +276,22 @@ const initialCartItems = [
 ];
 
 const cakeFillings = [
-  'No Bake Cheesecake***',
-  'Chocolate Mousse***',
-  'Vanilla Mousse',
-  'Fruit Compote',
+  {
+    title: 'No Bake Cheesecake***',
+    value: 'noBakeCheesecake',
+  },
+  {
+    title: 'Chocolate Mousse***',
+    value: 'chocolateMousse',
+  },
+  {
+    title: 'Vanilla Mousse',
+    value: 'vanillaMousse',
+  },
+  {
+    title: 'Fruit Compote',
+    value: 'fruitCompote',
+  },
 ];
 
 const categories = [

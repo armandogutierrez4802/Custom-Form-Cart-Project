@@ -45,27 +45,6 @@ const Cart = ({
     <>
       <h2>Cart</h2>
       <div id="cart">
-        {/* <div>Pies</div>
-        {pieItems.map((item) => (
-          <CartItem
-            title={item.title}
-            price={item.price}
-            selected={item.selected}
-            category={item.category}
-            id={item.id}
-            handleCartItemClick={handleCartItemClick}
-            total={total}
-            updateTotal={updateTotal}
-          />
-        ))} */}
-        {/* <div>Cakes</div>
-        {cakeItems.map((item) => (
-          <CartItem
-            {...item}
-            handleCartItemClick={handleCartItemClick}
-            updateTotal={updateTotal}
-          />
-        ))} */}
         {categories.map((category) => (
           <Category category={category} allCartItems={cartItems} />
         ))}
