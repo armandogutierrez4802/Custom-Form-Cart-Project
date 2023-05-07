@@ -31,7 +31,7 @@ const initialCartItems = [
     selected: false,
     category: 'pie',
     qty: 0,
-    id: 2,
+    id: 3,
   },
   {
     title: 'Chocolate Snickers Pie',
@@ -39,7 +39,7 @@ const initialCartItems = [
     selected: false,
     category: 'pie',
     qty: 0,
-    id: 2,
+    id: 4,
   },
   {
     title: 'Mini Pies (12ct)',
@@ -47,7 +47,7 @@ const initialCartItems = [
     selected: false,
     category: 'pie',
     qty: 0,
-    id: 3,
+    id: 5,
   },
   {
     title: 'Vanilla Cake***',
@@ -63,7 +63,7 @@ const initialCartItems = [
     selected: false,
     category: 'cake',
     qty: 0,
-    id: 6,
+    id: 7,
   },
   {
     title: 'Lemon Cake***',
@@ -71,7 +71,7 @@ const initialCartItems = [
     selected: false,
     category: 'cake',
     qty: 0,
-    id: 6,
+    id: 8,
   },
   {
     title: 'Marble Cake',
@@ -79,7 +79,7 @@ const initialCartItems = [
     selected: false,
     category: 'cake',
     qty: 0,
-    id: 6,
+    id: 9,
   },
   {
     title: 'Funfetti Cake',
@@ -87,7 +87,7 @@ const initialCartItems = [
     selected: false,
     category: 'cake',
     qty: 0,
-    id: 6,
+    id: 10,
   },
   {
     title: 'Strawberry Cake',
@@ -95,7 +95,7 @@ const initialCartItems = [
     selected: false,
     category: 'cake',
     qty: 0,
-    id: 6,
+    id: 11,
   },
   {
     title: 'Red Velvet Cake',
@@ -103,7 +103,7 @@ const initialCartItems = [
     selected: false,
     category: 'cake',
     qty: 0,
-    id: 6,
+    id: 12,
   },
   {
     title: 'Oreo Cake',
@@ -111,7 +111,7 @@ const initialCartItems = [
     selected: false,
     category: 'cake',
     qty: 0,
-    id: 6,
+    id: 13,
   },
   {
     title: 'Carrot Cake',
@@ -119,7 +119,7 @@ const initialCartItems = [
     selected: false,
     category: 'cake',
     qty: 0,
-    id: 6,
+    id: 14,
   },
   {
     title: 'Lemon Loaf Cake',
@@ -127,7 +127,7 @@ const initialCartItems = [
     selected: false,
     category: 'bakedGoods',
     qty: 0,
-    id: 6,
+    id: 15,
   },
   {
     title: 'Vanilla Loaf Cake',
@@ -135,7 +135,7 @@ const initialCartItems = [
     selected: false,
     category: 'bakedGoods',
     qty: 0,
-    id: 6,
+    id: 16,
   },
   {
     title: 'Mini Lemon Loaf Cake',
@@ -143,7 +143,7 @@ const initialCartItems = [
     selected: false,
     category: 'bakedGoods',
     qty: 0,
-    id: 6,
+    id: 17,
   },
   {
     title: 'Banana Nut Loaf Cake Bread',
@@ -151,7 +151,7 @@ const initialCartItems = [
     selected: false,
     category: 'bakedGoods',
     qty: 0,
-    id: 8,
+    id: 18,
   },
   {
     title: 'Mini Banana Nut Loaf Cake Bread',
@@ -159,7 +159,7 @@ const initialCartItems = [
     selected: false,
     category: 'bakedGoods',
     qty: 0,
-    id: 9,
+    id: 19,
   },
   {
     title: 'Coffee Cake',
@@ -167,7 +167,7 @@ const initialCartItems = [
     selected: false,
     category: 'bakedGoods',
     qty: 0,
-    id: 10,
+    id: 20,
   },
   {
     title: 'Cheesecake (w/Fruit or Ganache)',
@@ -175,7 +175,7 @@ const initialCartItems = [
     selected: false,
     category: 'bakedGoods',
     qty: 0,
-    id: 11,
+    id: 21,
   },
   {
     title: 'Lemon Bars***',
@@ -183,7 +183,7 @@ const initialCartItems = [
     selected: false,
     category: 'dessert',
     qty: 0,
-    id: 11,
+    id: 22,
   },
   {
     title: 'Cheesecake Shooters***',
@@ -191,7 +191,7 @@ const initialCartItems = [
     selected: false,
     category: 'dessert',
     qty: 0,
-    id: 11,
+    id: 23,
   },
   {
     title: 'Cake Pops',
@@ -199,7 +199,7 @@ const initialCartItems = [
     selected: false,
     category: 'dessert',
     qty: 0,
-    id: 11,
+    id: 24,
   },
   {
     title: 'Assorted Cookies',
@@ -207,7 +207,7 @@ const initialCartItems = [
     selected: false,
     category: 'dessert',
     qty: 0,
-    id: 11,
+    id: 25,
   },
   {
     title: 'Cupcakes',
@@ -215,7 +215,7 @@ const initialCartItems = [
     selected: false,
     category: 'dessert',
     qty: 0,
-    id: 11,
+    id: 26,
   },
   {
     title: 'Mini Cupcakes',
@@ -223,7 +223,7 @@ const initialCartItems = [
     selected: false,
     category: 'dessert',
     qty: 0,
-    id: 11,
+    id: 27,
   },
   {
     title: 'Rice Crispy Treats',
@@ -231,7 +231,7 @@ const initialCartItems = [
     selected: false,
     category: 'dessert',
     qty: 0,
-    id: 11,
+    id: 28,
   },
   {
     title: 'Chocolate Covered Pretzels***',
@@ -239,7 +239,7 @@ const initialCartItems = [
     selected: false,
     category: 'dessert',
     qty: 0,
-    id: 11,
+    id: 29,
   },
   {
     title: 'Fruit Tarts***',
@@ -247,7 +247,7 @@ const initialCartItems = [
     selected: false,
     category: 'dessert',
     qty: 0,
-    id: 11,
+    id: 30,
   },
   {
     title: 'Cinnamon Rolls',
@@ -255,7 +255,7 @@ const initialCartItems = [
     selected: false,
     category: 'dessert',
     qty: 0,
-    id: 11,
+    id: 31,
   },
   {
     title: 'Chocolate Covered Strawberries',
@@ -263,7 +263,7 @@ const initialCartItems = [
     selected: false,
     category: 'dessert',
     qty: 0,
-    id: 11,
+    id: 32,
   },
   {
     title: 'Champagne Chocolate Covered Strawberries',
@@ -271,7 +271,7 @@ const initialCartItems = [
     selected: false,
     category: 'dessert',
     qty: 0,
-    id: 11,
+    id: 33,
   },
 ];
 

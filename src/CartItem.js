@@ -42,6 +42,7 @@ const CartItem = ({
           <br />
         </>
       ))}
+      <br />
     </>
   );
 
