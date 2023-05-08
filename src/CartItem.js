@@ -22,7 +22,7 @@ const CartItem = ({
     const itemOptions = options.filter(
       (option) => option.category === category
     );
-    // console.log(itemOptions);
+    console.log(itemOptions);
     return (
       <>
         <button type="button" onClick={() => updateQty('-', id)}>
@@ -32,13 +32,14 @@ const CartItem = ({
         <button type="button" onClick={() => updateQty('+', id)}>
           +
         </button>
-        {itemOptions.map((option) => {
+        <br/>
+        {itemOptions.map((option) => (
           <>
             <input type="checkbox" value={option.value} />
             <label>{option.title}</label>
             <br />
-          </>;
-        })}
+          </>
+        ))}
       </>
     );
   };
