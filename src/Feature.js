@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Start from './Start';
 import Cart from './Cart';
 import Checkout from './Checkout';
@@ -7,17 +7,32 @@ import Confirmation from './Confirmation';
 // =========== Feauture Component ===========
 const Feature = ({
   initialCartItems,
-  options,
+  // initialPage,
+  // options,
   categories,
   pickupTimes,
   paymentMethods,
 }) => {
+  const localData = localStorage.getItem('page');
+  const initialPage = localData ? JSON.parse(localData) : 'start';
+  console.log(localData);
+  console.log(initialPage);
+
   //States
+  // const [page, setPage] = useState(localStorage.getItem('page'));
   const [page, setPage] = useState('start');
   const [cartItems, setCartItems] = useState(initialCartItems);
   const [total, setTotal] = useState(0);
   const [specialRequest, setSpecialRequest] = useState('');
   const [checkoutInfo, setCheckoutInfo] = useState([]);
+
+  //Local Storage
+  useEffect(() => {
+    // const localData = localStorage.getItem('page');
+    // console.log(localData);
+    // setPage(localData ? JSON.parse(localData) : 'start');
+    localStorage.setItem('page', page);
+  }, [page]);
 
   //Helper functions
   const handleCartItemClick = (id) => {

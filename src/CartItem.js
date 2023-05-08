@@ -32,7 +32,7 @@ const CartItem = ({
         <button type="button" onClick={() => updateQty('+', id)}>
           +
         </button>
-        <br/>
+        <br />
         {itemOptions.map((option) => (
           <>
             <input type="checkbox" value={option.value} />
@@ -43,31 +43,6 @@ const CartItem = ({
       </>
     );
   };
-
-  // const itemOptions = options.filter((option) => option.category === category);
-
-  // <>
-  //   <button type="button" onClick={() => updateQty('-', id)}>
-  //     -
-  //   </button>
-  //   <span>{qty}</span>
-  //   <button type="button" onClick={() => updateQty('+', id)}>
-  //     +
-  //   </button>
-  // </>;
-
-  // const optionsList = (
-  //   <>
-  //     {itemOptions.map((option) => (
-  //       <>
-  //         <input type="checkbox" value={option.value} />
-  //         <label>{option.title}</label>
-  //         <br />
-  //       </>
-  //     ))}
-  //     <br />
-  //   </>
-  // );
 
   return (
     <>
