@@ -32,7 +32,7 @@ const CartItem = ({
         <button type="button" onClick={() => updateQty('+', id)}>
           +
         </button>
-        <br />
+        {itemOptions.length? <br /> : ''}
         {itemOptions.map((option) => (
           <>
             <input type="checkbox" value={option.value} />
