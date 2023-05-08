@@ -1,5 +1,5 @@
 import React from 'react';
-import { cakeFillings } from './Constants.js';
+import { options } from './Constants.js';
 
 // =========== CartItem Component ===========
 const CartItem = ({
@@ -33,9 +33,11 @@ const CartItem = ({
   const optionsList = (
     //return out a dropdown menu with options based on the items category
     // Ex fillings for all the cake options
+    const itemOptions = 
+
     <>
-      <div>Please select a cake filling for your {title}</div>
-      {cakeFillings.map((option) => (
+    {/* <div>Please select a {option.name} for your {title}</div> */}
+      {options.map((option) => (
         <>
           <input type="checkbox" value={option.value} />
           <label>{option.title}</label>
@@ -59,7 +61,7 @@ const CartItem = ({
       <span>${price}</span>
       {qty ? qtyButtons : ''}
       <br />
-      {qty > 0 && category === 'cake' ? optionsList : ''}
+      {qty ? optionsList : ''}
     </>
   );
 };

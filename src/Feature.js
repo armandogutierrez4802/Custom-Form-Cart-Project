@@ -7,6 +7,7 @@ import Confirmation from './Confirmation';
 // =========== Feauture Component ===========
 const Feature = ({
   initialCartItems,
+  options,
   categories,
   pickupTimes,
   paymentMethods,
@@ -88,6 +89,7 @@ const Feature = ({
       <Cart
         updatePage={updatePage}
         cartItems={cartItems}
+        // options={options}
         categories={categories}
         handleCartItemClick={handleCartItemClick}
         updateQty={updateQty}

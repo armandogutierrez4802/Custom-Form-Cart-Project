@@ -275,22 +275,30 @@ const initialCartItems = [
   },
 ];
 
-const cakeFillings = [
+const options = [
   {
     title: 'No Bake Cheesecake***',
     value: 'noBakeCheesecake',
+    name: 'cake filling',
+    category: 'cake',
   },
   {
     title: 'Chocolate Mousse***',
     value: 'chocolateMousse',
+    name: 'cake filling',
+    category: 'cake',
   },
   {
     title: 'Vanilla Mousse',
     value: 'vanillaMousse',
+    name: 'cake filling',
+    category: 'cake',
   },
   {
     title: 'Fruit Compote',
     value: 'fruitCompote',
+    name: 'cake filling',
+    category: 'cake',
   },
 ];
 
@@ -403,10 +411,4 @@ const paymentMethods = [
   },
 ];
 
-export {
-  initialCartItems,
-  cakeFillings,
-  categories,
-  pickupTimes,
-  paymentMethods,
-};
+export { initialCartItems, options, categories, pickupTimes, paymentMethods };

@@ -6,6 +6,7 @@ import CartItem from './CartItem';
 const Cart = ({
   updatePage,
   cartItems,
+  // options,
   categories,
   handleCartItemClick,
   updateQty,
@@ -22,7 +23,7 @@ const Cart = ({
 
     return (
       <>
-        <div>{category.title}</div>
+        <h3>{category.title}</h3>
         {items.map((item) => (
           <CartItem
             title={item.title}
