@@ -13,12 +13,13 @@ const Feature = ({
   pickupTimes,
   paymentMethods,
 }) => {
-  const localData = localStorage.getItem('page');
-  const initialPage = localData ? JSON.parse(localData) : 'start';
-  console.log(localData);
-  console.log(initialPage);
+  // const localData = localStorage.getItem('page');
+  // const initialPage = localData ? JSON.parse(localData) : 'start';
+  // console.log(localData);
+  // console.log(initialPage);
 
   //States
+  // const [page, setPage] = useState(localStorage.getItem('page'));
   // const [page, setPage] = useState(localStorage.getItem('page'));
   const [page, setPage] = useState('start');
   const [cartItems, setCartItems] = useState(initialCartItems);
@@ -28,10 +29,11 @@ const Feature = ({
 
   //Local Storage
   useEffect(() => {
-    // const localData = localStorage.getItem('page');
-    // console.log(localData);
+    const localData = localStorage.getItem('page');
+    console.log(localData);
     // setPage(localData ? JSON.parse(localData) : 'start');
-    localStorage.setItem('page', page);
+    localStorage.setItem('page', localData ? JSON.parse(localData) : 'start');
+    // localStorage.setItem('page', page);
   }, [page]);
 
   //Helper functions
