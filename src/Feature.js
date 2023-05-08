@@ -13,15 +13,23 @@ const Feature = ({
   pickupTimes,
   paymentMethods,
 }) => {
-  // const localData = localStorage.getItem('page');
-  // const initialPage = localData ? JSON.parse(localData) : 'start';
+  const localData = localStorage.getItem('page');
+
+  let initialPage;
+  if (!localData) {
+    console.log('if');
+    initialPage = JSON.parse(localData);
+  } else {
+    console.log('else');
+    initialPage = 'start';
+  }
   // console.log(localData);
-  // console.log(initialPage);
+  console.log(initialPage);
 
   //States
+  const [page, setPage] = useState(initialPage);
   // const [page, setPage] = useState(localStorage.getItem('page'));
-  // const [page, setPage] = useState(localStorage.getItem('page'));
-  const [page, setPage] = useState('start');
+
   const [cartItems, setCartItems] = useState(initialCartItems);
   const [total, setTotal] = useState(0);
   const [specialRequest, setSpecialRequest] = useState('');
@@ -29,10 +37,11 @@ const Feature = ({
 
   //Local Storage
   useEffect(() => {
-    const localData = localStorage.getItem('page');
-    console.log(localData);
+    console.log('useEffect');
+    // const localData = localStorage.getItem('page');
+    // console.log(localData);
     // setPage(localData ? JSON.parse(localData) : 'start');
-    localStorage.setItem('page', localData ? JSON.parse(localData) : 'start');
+    // localStorage.setItem('page', localData ? JSON.parse(localData) : 'start');
     // localStorage.setItem('page', page);
   }, [page]);
 
