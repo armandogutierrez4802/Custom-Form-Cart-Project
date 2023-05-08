@@ -18,35 +18,55 @@ const CartItem = ({
     handleCartItemClick(id);
   };
 
-  const qtyButtons = (
-    <>
-      <button type="button" onClick={() => updateQty('-', id)}>
-        -
-      </button>
-      <span>{qty}</span>
-      <button type="button" onClick={() => updateQty('+', id)}>
-        +
-      </button>
-    </>
-  );
+  const SelectedItem = () => {
+    const itemOptions = options.filter(
+      (option) => option.category === category
+    );
+    // console.log(itemOptions);
+    return (
+      <>
+        <button type="button" onClick={() => updateQty('-', id)}>
+          -
+        </button>
+        <span>{qty}</span>
+        <button type="button" onClick={() => updateQty('+', id)}>
+          +
+        </button>
+        {itemOptions.map((option) => {
+          <>
+            <input type="checkbox" value={option.value} />
+            <label>{option.title}</label>
+            <br />
+          </>;
+        })}
+      </>
+    );
+  };
 
-  const optionsList = (
-    //return out a dropdown menu with options based on the items category
-    // Ex fillings for all the cake options
-    const itemOptions = 
+  // const itemOptions = options.filter((option) => option.category === category);
 
-    <>
-    {/* <div>Please select a {option.name} for your {title}</div> */}
-      {options.map((option) => (
-        <>
-          <input type="checkbox" value={option.value} />
-          <label>{option.title}</label>
-          <br />
-        </>
-      ))}
-      <br />
-    </>
-  );
+  // <>
+  //   <button type="button" onClick={() => updateQty('-', id)}>
+  //     -
+  //   </button>
+  //   <span>{qty}</span>
+  //   <button type="button" onClick={() => updateQty('+', id)}>
+  //     +
+  //   </button>
+  // </>;
+
+  // const optionsList = (
+  //   <>
+  //     {itemOptions.map((option) => (
+  //       <>
+  //         <input type="checkbox" value={option.value} />
+  //         <label>{option.title}</label>
+  //         <br />
+  //       </>
+  //     ))}
+  //     <br />
+  //   </>
+  // );
 
   return (
     <>
@@ -59,9 +79,10 @@ const CartItem = ({
       />
       <label htmlFor={id}>{title} ... </label>
       <span>${price}</span>
-      {qty ? qtyButtons : ''}
+      {qty ? <SelectedItem /> : ''}
+      {/* {qty ? qtyButtons : '' */}
       <br />
-      {qty ? optionsList : ''}
+      {/* {qty ? optionsList : ''} */}
     </>
   );
 };
