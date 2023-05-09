@@ -14,14 +14,15 @@ export default function App() {
   // const fillingOptions = [];
   // const options = []; // Like adding nuts, fruit, etc.... maybe put fillings here too?
 
-  const [count, setCount] = useState(localStorage.getItem('count'));
+  // const [count, setCount] = useState(0);
+  const [count, setCount] = useState(parseInt(localStorage.getItem('counter')));
 
   useEffect(() => {
-    localStorage.setItem('count', count+1);
+    localStorage.setItem('counter', count);
   }, [count])
 
   const handleClick = () => {
-    // setCount(count+1);
+    setCount(count+1);
   }
 
   return (
