@@ -9,6 +9,7 @@ const CartItem = ({
   category,
   qty,
   id,
+  itemOptionsProp,
   handleCartItemClick,
   updateQty,
   total,
@@ -44,6 +45,8 @@ const CartItem = ({
     );
   };
 
+console.log(itemOptionsProp);
+
   return (
     <>
       <input
@@ -56,6 +59,7 @@ const CartItem = ({
       <label htmlFor={id}>{title} ... </label>
       <span>${price}</span>
       {qty ? <SelectedItem /> : ''}
+      {itemOptionsProp? itemOptionsProp : ''}
       {/* {qty ? qtyButtons : '' */}
       <br />
       {/* {qty ? optionsList : ''} */}

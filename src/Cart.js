@@ -32,6 +32,7 @@ const Cart = ({
             category={item.category}
             qty={item.qty}
             id={item.id}
+            itemOptionsProp={item.options}
             handleCartItemClick={handleCartItemClick}
             updateQty={updateQty}
             total={total}
