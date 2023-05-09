@@ -280,26 +280,87 @@ const options = [
     value: 'noBakeCheesecake',
     name: 'cake filling',
     category: 'cake',
+    size: [
+      {
+        title: '6 inch',
+        value: 'sixInch',
+        name: 'cake size',
+        selected: false
+      },
+      {
+        title: '8 inch',
+        value: 'eightInch',
+        name: 'cake size',
+        selected: false
+      },
+    ],
+    selected: false
   },
   {
     title: 'Chocolate Mousse***',
     value: 'chocolateMousse',
     name: 'cake filling',
     category: 'cake',
+    size: [
+      {
+        title: '6 inch',
+        value: 'sixInch',
+        name: 'cake size',
+        selected: false
+      },
+      {
+        title: '8 inch',
+        value: 'eightInch',
+        name: 'cake size',
+        selected: false
+      },
+    ],
+    selected: false
   },
   {
     title: 'Vanilla Mousse',
     value: 'vanillaMousse',
     name: 'cake filling',
     category: 'cake',
+    size: [
+      {
+        title: '6 inch',
+        value: 'sixInch',
+        name: 'cake size',
+        selected: false
+      },
+      {
+        title: '8 inch',
+        value: 'eightInch',
+        name: 'cake size',
+        selected: false
+      },
+    ],
+    selected: false
   },
   {
     title: 'Fruit Compote',
     value: 'fruitCompote',
     name: 'cake filling',
     category: 'cake',
+    size: [
+      {
+        title: '6 inch',
+        value: 'sixInch',
+        name: 'cake size',
+        selected: false
+      },
+      {
+        title: '8 inch',
+        value: 'eightInch',
+        name: 'cake size',
+        selected: false
+      },
+    ],
+    selected: false
   },
 ];
+
 
 const categories = [
   {
