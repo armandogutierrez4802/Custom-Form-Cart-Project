@@ -55,6 +55,9 @@ const initialCartItems = [
     category: 'cake',
     qty: 0,
     id: 6,
+    options: options.filter(
+      (option) => option.category === 'cake'
+    )
   },
   {
     title: 'Chocolate Cake***',
