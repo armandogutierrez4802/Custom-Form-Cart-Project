@@ -46,6 +46,7 @@ const CartItem = ({
   };
 
 console.log(itemOptionsProp);
+let output = itemOptionsProp ? itemOptionsProp : [];
 
   return (
     <>
@@ -59,7 +60,7 @@ console.log(itemOptionsProp);
       <label htmlFor={id}>{title} ... </label>
       <span>${price}</span>
       {qty ? <SelectedItem /> : ''}
-      {itemOptionsProp? itemOptionsProp : ''}
+      {/* {output.map(option => option)} */}
       {/* {qty ? qtyButtons : '' */}
       <br />
       {/* {qty ? optionsList : ''} */}
