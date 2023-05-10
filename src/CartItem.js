@@ -1,5 +1,5 @@
 import React from 'react';
-import { options } from './Constants.js';
+// import { options } from './Constants.js';
 
 // =========== CartItem Component ===========
 const CartItem = ({
@@ -9,7 +9,7 @@ const CartItem = ({
   category,
   qty,
   id,
-  itemOptionsProp,
+  options,
   handleCartItemClick,
   updateQty,
   total,
@@ -45,8 +45,8 @@ const CartItem = ({
     );
   };
 
-console.log(itemOptionsProp);
-let output = itemOptionsProp ? itemOptionsProp : [];
+// console.log(itemOptionsProp);
+// let output = itemOptionsProp ? itemOptionsProp : [];
 
   return (
     <>
