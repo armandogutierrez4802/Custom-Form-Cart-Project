@@ -15,10 +15,6 @@ const CartItem = ({
   total,
   updateTotal,
 }) => {
-  const handleOnChange = () => {
-    handleCartItemClick(id);
-  };
-
   const SelectedItem = () => {
     // const itemOptions = options.filter(
     //   (option) => option.category === category
@@ -41,20 +37,25 @@ const CartItem = ({
             <br />
           </>
         ))} */}
-         {options && options.length? <br /> : ''}
-        {options && options.map((option) => (
-          <>
-            <input type="checkbox" value={option.value} />
-            <label>{option.title}</label>
-            <br />
-          </>
-        ))}
+        {options && options.length ? <br /> : ''}
+        {options &&
+          options.map((option) => (
+            <>
+              <input type="checkbox" value={option.value} />
+              <label>{option.title}</label>
+              <br />
+            </>
+          ))}
       </>
     );
   };
 
-// console.log(itemOptionsProp);
-// let output = itemOptionsProp ? itemOptionsProp : [];
+  // console.log(itemOptionsProp);
+  // let output = itemOptionsProp ? itemOptionsProp : [];
+
+  const handleOnChange = () => {
+    handleCartItemClick(id);
+  };
 
   return (
     <>
