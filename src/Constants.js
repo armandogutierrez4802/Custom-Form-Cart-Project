@@ -333,7 +333,7 @@ const categories = [
     value: 'pie',
   },
   {
-    title: 'Nakes Cakes (6" & 8")',
+    title: 'Naked Cakes (6" & 8")',
     value: 'cake',
   },
   {
