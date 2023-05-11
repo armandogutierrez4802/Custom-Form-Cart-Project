@@ -50,9 +50,6 @@ const CartItem = ({
     );
   };
 
-  // console.log(itemOptionsProp);
-  // let output = itemOptionsProp ? itemOptionsProp : [];
-
   const handleOnChange = () => {
     handleCartItemClick(id);
   };
@@ -69,10 +66,7 @@ const CartItem = ({
       <label htmlFor={id}>{title} ... </label>
       <span>${price}</span>
       {qty ? <SelectedItem /> : ''}
-      {/* {output.map(option => option)} */}
-      {/* {qty ? qtyButtons : '' */}
       <br />
-      {/* {qty ? optionsList : ''} */}
     </>
   );
 };

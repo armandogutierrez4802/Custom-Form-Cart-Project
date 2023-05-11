@@ -1,3 +1,16 @@
+const newOptions = [
+  {
+    // title: 'Select your cake #',
+    category: 'cake',
+    name: 'cakeSize',
+    options: {
+      title: '6 inch',
+      value: 'sixInch',
+      selected: false,
+    },
+    
+  },
+];
 
 const options = [
   {
@@ -10,16 +23,16 @@ const options = [
         title: '6 inch',
         value: 'sixInch',
         name: 'cake size',
-        selected: false
+        selected: false,
       },
       {
         title: '8 inch',
         value: 'eightInch',
         name: 'cake size',
-        selected: false
+        selected: false,
       },
     ],
-    selected: false
+    selected: false,
   },
   {
     title: 'Chocolate Mousse***',
@@ -31,16 +44,16 @@ const options = [
         title: '6 inch',
         value: 'sixInch',
         name: 'cake size',
-        selected: false
+        selected: false,
       },
       {
         title: '8 inch',
         value: 'eightInch',
         name: 'cake size',
-        selected: false
+        selected: false,
       },
     ],
-    selected: false
+    selected: false,
   },
   {
     title: 'Vanilla Mousse',
@@ -52,16 +65,16 @@ const options = [
         title: '6 inch',
         value: 'sixInch',
         name: 'cake size',
-        selected: false
+        selected: false,
       },
       {
         title: '8 inch',
         value: 'eightInch',
         name: 'cake size',
-        selected: false
+        selected: false,
       },
     ],
-    selected: false
+    selected: false,
   },
   {
     title: 'Fruit Compote',
@@ -73,16 +86,16 @@ const options = [
         title: '6 inch',
         value: 'sixInch',
         name: 'cake size',
-        selected: false
+        selected: false,
       },
       {
         title: '8 inch',
         value: 'eightInch',
         name: 'cake size',
-        selected: false
+        selected: false,
       },
     ],
-    selected: false
+    selected: false,
   },
 ];
 
@@ -142,9 +155,7 @@ const initialCartItems = [
     category: 'cake',
     qty: 0,
     id: 6,
-    options: options.filter(
-      (option) => option.category === 'cake'
-    )
+    options: options.filter((option) => option.category === 'cake'),
   },
   {
     title: 'Chocolate Cake***',
@@ -363,7 +374,6 @@ const initialCartItems = [
     id: 33,
   },
 ];
-
 
 const categories = [
   {

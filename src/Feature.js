@@ -60,7 +60,6 @@ const Feature = ({
     setCartItems(newCartItems);
   };
 
-  // CHANGING THE QTY DOES NOT CHANGE THE STATUS OF THE CHECKBOX... HOW TO DO THAT???
   const updateQty = (operator, id) => {
     const newCartItems = cartItems.map((item) => {
       if (item.id === id) {
