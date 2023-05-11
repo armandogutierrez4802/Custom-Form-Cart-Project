@@ -1,6 +1,14 @@
 import React from 'react';
 // import { options } from './Constants.js';
 
+
+/*
+TASKS: 
+- SAVE SELECT STATE OF OPTIONS IN CART ITEMS (JUST LIKE QTY)
+- UPDATING QTY WILL UPDATE HOW MANY OPTIONS LISTS WILL RENDER
+- SELECTING SPECIFIC OPTION (LIKE CAKE SIZE, WILL CHANGE CARTITEM PRICE)
+*/
+
 // =========== CartItem Component ===========
 const CartItem = ({
   title,
