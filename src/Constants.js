@@ -1,6 +1,5 @@
-const newOptions = [
+const optionsList = [
   {
-    // title: 'Select your cake #',
     category: 'cake',
     name: 'cake size',
     options: [
@@ -41,93 +40,6 @@ const newOptions = [
         selected: false,
       },
     ],
-  },
-];
-
-const options = [
-  {
-    title: 'No Bake Cheesecake***',
-    value: 'noBakeCheesecake',
-    name: 'cake filling',
-    category: 'cake',
-    size: [
-      {
-        title: '6 inch',
-        value: 'sixInch',
-        name: 'cake size',
-        selected: false,
-      },
-      {
-        title: '8 inch',
-        value: 'eightInch',
-        name: 'cake size',
-        selected: false,
-      },
-    ],
-    selected: false,
-  },
-  {
-    title: 'Chocolate Mousse***',
-    value: 'chocolateMousse',
-    name: 'cake filling',
-    category: 'cake',
-    size: [
-      {
-        title: '6 inch',
-        value: 'sixInch',
-        name: 'cake size',
-        selected: false,
-      },
-      {
-        title: '8 inch',
-        value: 'eightInch',
-        name: 'cake size',
-        selected: false,
-      },
-    ],
-    selected: false,
-  },
-  {
-    title: 'Vanilla Mousse',
-    value: 'vanillaMousse',
-    name: 'cake filling',
-    category: 'cake',
-    size: [
-      {
-        title: '6 inch',
-        value: 'sixInch',
-        name: 'cake size',
-        selected: false,
-      },
-      {
-        title: '8 inch',
-        value: 'eightInch',
-        name: 'cake size',
-        selected: false,
-      },
-    ],
-    selected: false,
-  },
-  {
-    title: 'Fruit Compote',
-    value: 'fruitCompote',
-    name: 'cake filling',
-    category: 'cake',
-    size: [
-      {
-        title: '6 inch',
-        value: 'sixInch',
-        name: 'cake size',
-        selected: false,
-      },
-      {
-        title: '8 inch',
-        value: 'eightInch',
-        name: 'cake size',
-        selected: false,
-      },
-    ],
-    selected: false,
   },
 ];
 
@@ -187,7 +99,7 @@ const initialCartItems = [
     category: 'cake',
     qty: 0,
     id: 6,
-    options: options.filter((option) => option.category === 'cake'),
+    options: optionsList.filter((option) => option.category === 'cake'),
   },
   {
     title: 'Chocolate Cake***',
@@ -196,7 +108,7 @@ const initialCartItems = [
     category: 'cake',
     qty: 0,
     id: 7,
-    options: newOptions.filter((option) => option.category === 'cake')
+    options: optionsList.filter((option) => option.category === 'cake'),
   },
   {
     title: 'Lemon Cake***',
@@ -205,6 +117,7 @@ const initialCartItems = [
     category: 'cake',
     qty: 0,
     id: 8,
+    options: optionsList.filter((option) => option.category === 'cake'),
   },
   {
     title: 'Marble Cake',
@@ -213,6 +126,7 @@ const initialCartItems = [
     category: 'cake',
     qty: 0,
     id: 9,
+    options: optionsList.filter((option) => option.category === 'cake'),
   },
   {
     title: 'Funfetti Cake',
@@ -221,6 +135,7 @@ const initialCartItems = [
     category: 'cake',
     qty: 0,
     id: 10,
+    options: optionsList.filter((option) => option.category === 'cake'),
   },
   {
     title: 'Strawberry Cake',
@@ -229,6 +144,7 @@ const initialCartItems = [
     category: 'cake',
     qty: 0,
     id: 11,
+    options: optionsList.filter((option) => option.category === 'cake'),
   },
   {
     title: 'Red Velvet Cake',
@@ -237,6 +153,7 @@ const initialCartItems = [
     category: 'cake',
     qty: 0,
     id: 12,
+    options: optionsList.filter((option) => option.category === 'cake'),
   },
   {
     title: 'Oreo Cake',
@@ -245,6 +162,7 @@ const initialCartItems = [
     category: 'cake',
     qty: 0,
     id: 13,
+    options: optionsList.filter((option) => option.category === 'cake'),
   },
   {
     title: 'Carrot Cake',
@@ -253,6 +171,7 @@ const initialCartItems = [
     category: 'cake',
     qty: 0,
     id: 14,
+    options: optionsList.filter((option) => option.category === 'cake'),
   },
   {
     title: 'Lemon Loaf Cake',
@@ -517,4 +436,4 @@ const paymentMethods = [
   },
 ];
 
-export { initialCartItems, options, categories, pickupTimes, paymentMethods };
+export { initialCartItems, categories, pickupTimes, paymentMethods };
