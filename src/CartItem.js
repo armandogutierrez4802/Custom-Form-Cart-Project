@@ -8,7 +8,7 @@ TASKS:
 - UPDATING QTY WILL UPDATE HOW MANY OPTIONS LISTS WILL RENDER
 - SELECTING SPECIFIC OPTION (LIKE CAKE SIZE, WILL CHANGE CARTITEM PRICE)
 */
-
+ 
 // =========== CartItem Component ===========
 const CartItem = ({
   title,
@@ -19,6 +19,7 @@ const CartItem = ({
   id,
   options,
   handleCartItemClick,
+  handleOptionClick,
   updateQty,
   total,
   updateTotal,
@@ -62,8 +63,8 @@ const CartItem = ({
               {option.options.map((opt) => (
                 <>
                   {/*NAME CAN BE OPT.NAME OR OPTION.NAME*/}
-                  <input type="radio" name={option.name + id} value={opt.value} />
-                  <label>{opt.title}</label>
+                  <input type="radio" id={opt.title + id} name={option.name + id} value={opt.value} />
+                  <label htmlFor={opt.title + id}>{opt.title}</label>
                   <br />
                   {console.log(option.name + id)}
                 </>

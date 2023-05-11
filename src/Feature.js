@@ -60,6 +60,20 @@ const Feature = ({
     setCartItems(newCartItems);
   };
 
+  const handleOptionClick = () => {
+      // We need the id and the value of the radio button
+
+      // For each item
+      // if item id matches
+      // then map through their options
+      // if value matches, then check
+      // if selected = true, then selected = false, vice versa
+      // ALSO check if option has additional price, so we can let item.price = item.price + optionAdditionalCharge)
+      // (This means each option will probably need a hasCharge boolean p,roperty)
+      // (If hasCharge is true, then add that extra charge as mentioned above)
+      // return the item, then setCartItems like in handleCartItemClick()
+  }
+
   const updateQty = (operator, id) => {
     const newCartItems = cartItems.map((item) => {
       if (item.id === id) {
@@ -111,6 +125,7 @@ const Feature = ({
         // options={options}
         categories={categories}
         handleCartItemClick={handleCartItemClick}
+        handleOptionClick={handleOptionClick}
         updateQty={updateQty}
         specialRequest={specialRequest}
         setSpecialRequest={setSpecialRequest}
