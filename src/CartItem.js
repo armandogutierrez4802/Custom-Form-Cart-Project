@@ -53,9 +53,11 @@ const CartItem = ({
 
               {option.options.map((opt) => (
                 <>
-                  <input type="checkbox" value={opt.value} />
+                  {/*NAME CAN BE OPT.NAME OR OPTION.NAME*/}
+                  <input type="radio" name={option.name + id} value={opt.value} />
                   <label>{opt.title}</label>
                   <br />
+                  {console.log(option.name + id)}
                 </>
               ))}
 
