@@ -38,12 +38,28 @@ const CartItem = ({
           </>
         ))} */}
         {options && options.length ? <br /> : ''}
-        {options &&
+        {/* {options &&
           options.map((option) => (
             <>
               <input type="checkbox" value={option.value} />
               <label>{option.title}</label>
               <br />
+            </>
+          ))} */}
+        {options &&
+          options.map((option) => (
+            <>
+              <div>Please select your {option.name}</div>
+
+              {option.options.map((opt) => (
+                <>
+                  <input type="checkbox" value={opt.value} />
+                  <label>{opt.title}</label>
+                  <br />
+                </>
+              ))}
+
+              {/* <br /> */}
             </>
           ))}
       </>

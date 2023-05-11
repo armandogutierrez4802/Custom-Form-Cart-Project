@@ -2,13 +2,45 @@ const newOptions = [
   {
     // title: 'Select your cake #',
     category: 'cake',
-    name: 'cakeSize',
-    options: {
-      title: '6 inch',
-      value: 'sixInch',
-      selected: false,
-    },
-    
+    name: 'cake size',
+    options: [
+      {
+        title: '6 inch',
+        value: 'sixInch',
+        selected: false,
+      },
+      {
+        title: '8 inch',
+        value: 'eightInch',
+        selected: false,
+      },
+    ],
+  },
+  {
+    category: 'cake',
+    name: 'cake filling',
+    options: [
+      {
+        title: 'No Bake Cheesecake***',
+        value: 'noBakeCheesecake',
+        selected: false,
+      },
+      {
+        title: 'Chocolate Mousse***',
+        value: 'chocolateMousse',
+        selected: false,
+      },
+      {
+        title: 'Vanilla Mousse',
+        value: 'vanillaMousse',
+        selected: false,
+      },
+      {
+        title: 'Fruit Compote',
+        value: 'fruitCompote',
+        selected: false,
+      },
+    ],
   },
 ];
 
@@ -164,6 +196,7 @@ const initialCartItems = [
     category: 'cake',
     qty: 0,
     id: 7,
+    options: newOptions.filter((option) => option.category === 'cake')
   },
   {
     title: 'Lemon Cake***',
