@@ -60,36 +60,50 @@ const Feature = ({
     setCartItems(newCartItems);
   };
 
-  const handleOptionClick = (id, optValue) => {
-    // We need the id and the value of the radio button
-    // console.log('id ', id);
-    // console.log('opt.value ', optValue);
-    // For each item
-    // if item id matches
-    // then map through their options
-    // if value matches, then check
-    // if selected = true, then selected = false, vice versa
-    // ALSO check if option has additional price, so we can let item.price = item.price + optionAdditionalCharge)
-    // (This means each option will probably need a hasCharge boolean property)
-    // (If hasCharge is true, then add that extra charge as mentioned above)
-    // return the item, then setCartItems like in handleCartItemClick()
+  const handleOptionClick = (id, groupName, optionValue, extraCharge) => {
+    // Update the selected option in group with the value of the selected option
     const newCartItems = cartItems.map((item) => {
       if (item.id === id) {
-        console.log('item ', item);
-        item.options.map((option) => {
-          option.options.map((opt) => {
-            if (opt.value === optValue) {
-              opt.selected = !opt.selected;
-              console.log(`${opt.value}.selected = `, opt.selected);
-            }
-          });
+        item.optionGroups.map((group) => {
+          if (group.name === groupName) {
+          }
         });
       }
-      return item;
     });
-    // updateTotal();
-    setCartItems(newCartItems);
   };
+
+  // Update the extra charge of group based on newly selected option
+
+  // const handleOptionClick = (id, optValue) => {
+  // We need the id and the value of the radio button
+  // console.log('id ', id);
+  // console.log('opt.value ', optValue);
+  // For each item
+  // if item id matches
+  // then map through their options
+  // if value matches, then check
+  // if selected = true, then selected = false, vice versa
+  // ALSO check if option has additional price, so we can let item.price = item.price + optionAdditionalCharge)
+  // (This means each option will probably need a hasCharge boolean property)
+  // (If hasCharge is true, then add that extra charge as mentioned above)
+  // return the item, then setCartItems like in handleCartItemClick()
+  //   const newCartItems = cartItems.map((item) => {
+  //     if (item.id === id) {
+  //       console.log('item ', item);
+  //       item.options.map((option) => {
+  //         option.options.map((opt) => {
+  //           if (opt.value === optValue) {
+  //             opt.selected = !opt.selected;
+  //             console.log(`${opt.value}.selected = `, opt.selected);
+  //           }
+  //         });
+  //       });
+  //     }
+  //     return item;
+  //   });
+  //   // updateTotal();
+  //   setCartItems(newCartItems);
+  // };
 
   const updateQty = (operator, id) => {
     const newCartItems = cartItems.map((item) => {

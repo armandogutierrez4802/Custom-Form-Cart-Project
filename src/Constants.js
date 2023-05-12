@@ -2,18 +2,18 @@ const allOptionGroups = [
   {
     category: 'cake',
     name: 'cake size',
-    selected: 'sixInch', // Default option
-    extraCharge: 0, // Default charge
+    selected: 'sixInch', // Selected option
+    extraCharge: 0,
     options: [
       {
         title: '6 inch',
         value: 'sixInch',
-        extraCharge: 0,
+        optExtraCharge: 0,
       },
       {
         title: '8 inch',
         value: 'eightInch',
-        extraCharge: 10,
+        optExtraCharge: 10,
       },
     ],
   },
@@ -26,22 +26,22 @@ const allOptionGroups = [
       {
         title: 'No Bake Cheesecake***',
         value: 'noBakeCheesecake',
-        extraCharge: 0,
+        optExtraCharge: 0,
       },
       {
         title: 'Chocolate Mousse***',
         value: 'chocolateMousse',
-        extraCharge: 0,
+        optExtraCharge: 0,
       },
       {
         title: 'Vanilla Mousse',
         value: 'vanillaMousse',
-        extraCharge: 0,
+        optExtraCharge: 0,
       },
       {
         title: 'Fruit Compote',
         value: 'fruitCompote',
-        extraCharge: 0,
+        optExtraCharge: 0,
       },
     ],
   },
