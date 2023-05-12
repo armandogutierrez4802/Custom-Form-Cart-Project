@@ -2,18 +2,19 @@ const optionsList = [
   {
     category: 'cake',
     name: 'cake size',
+    selected: 'sixInch', // Default value
     options: [
-      { 
+      {  
         title: '6 inch',
         value: 'sixInch',
         extraCharge: 0,
-        selected: false,
+        // selected: false,
       },
       {
         title: '8 inch',
         value: 'eightInch',
         extraCharge: 10,
-        selected: false,
+        // selected: false,
       },
     ],
   },

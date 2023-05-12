@@ -24,8 +24,10 @@ const CartItem = ({
   // updateTotal,
 }) => {
   const SelectedItem = () => {
+
+
     return (
-      <> 
+      <>
         <button type="button" onClick={() => updateQty('-', id)}>
           -
         </button>
@@ -46,8 +48,9 @@ const CartItem = ({
                   <input
                     type="radio"
                     id={opt.title + id}
-                    name={option.name + id}
+                    name={option.name}
                     value={opt.value}
+                    checked={selected}
                     onChange={() => handleOptionClick(id, opt.value)}
                   />
                   <label htmlFor={opt.title + id}>{opt.title}</label>
