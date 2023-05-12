@@ -24,6 +24,8 @@ const CartItem = ({
   // updateTotal,
 }) => {
   const SelectedItem = () => {
+    const handleOnChange = () => {};
+
     return (
       <>
         <button type="button" onClick={() => updateQty('-', id)}>
@@ -42,24 +44,22 @@ const CartItem = ({
             <>
               <div>Please select your {group.name}</div>
               {console.log(group)}
-              {group.options.map(
-                (option) => (
-                  <>
-                    {/* {console.log('Options array ', options)} */}
-                    <input
-                      type="radio"
-                      id={option.value}
-                      name={group}
-                      value={option.value}
-                      // checked={ (group.selected === option.value)? }
-                      // onChange={() => handleOptionClick(id, opt.value)}
-                    />
-                    <label htmlFor={option.value}>{option.title}</label>
-                    <br />
-                  </>
-                ),
-                this
-              )}
+              {group.options.map((option) => (
+                <>
+                  {/* {console.log('Options array ', options)} */}
+                  <input
+                    type="radio"
+                    id={option.value}
+                    name={group.name}
+                    value={option.value}
+                    checked={group.selected === option.value}
+                    // onChange={() => handleOptionClick(id, opt.value)}
+                    onChange={() => handleOnChange()}
+                  />
+                  <label htmlFor={option.value}>{option.title}</label>
+                  <br />
+                </>
+              ))}
             </>
           ))}
       </>
