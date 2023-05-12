@@ -6,11 +6,13 @@ const optionsList = [
       {
         title: '6 inch',
         value: 'sixInch',
+        extraCharge: 0,
         selected: false,
       },
       {
         title: '8 inch',
         value: 'eightInch',
+        extraCharge: 10,
         selected: false,
       },
     ],
@@ -22,21 +24,25 @@ const optionsList = [
       {
         title: 'No Bake Cheesecake***',
         value: 'noBakeCheesecake',
+        extraCharge: 0,
         selected: false,
       },
       {
         title: 'Chocolate Mousse***',
         value: 'chocolateMousse',
+        extraCharge: 0,
         selected: false,
       },
       {
         title: 'Vanilla Mousse',
         value: 'vanillaMousse',
+        extraCharge: 0,
         selected: false,
       },
       {
         title: 'Fruit Compote',
         value: 'fruitCompote',
+        extraCharge: 0,
         selected: false,
       },
     ],
@@ -51,6 +57,7 @@ const initialCartItems = [
     category: 'pie',
     qty: 0,
     id: 0,
+    options: [],
   },
   {
     title: 'Sweet Potato Pie (seasonal)',
@@ -59,6 +66,7 @@ const initialCartItems = [
     category: 'pie',
     qty: 0,
     id: 1,
+    options: [],
   },
   {
     title: 'Banana Cream Pie***',
@@ -67,6 +75,7 @@ const initialCartItems = [
     category: 'pie',
     qty: 0,
     id: 2,
+    options: [],
   },
   {
     title: 'Peach Pie',
@@ -75,6 +84,7 @@ const initialCartItems = [
     category: 'pie',
     qty: 0,
     id: 3,
+    options: [],
   },
   {
     title: 'Chocolate Snickers Pie',
@@ -83,6 +93,7 @@ const initialCartItems = [
     category: 'pie',
     qty: 0,
     id: 4,
+    options: [],
   },
   {
     title: 'Mini Pies (12ct)',
@@ -91,10 +102,11 @@ const initialCartItems = [
     category: 'pie',
     qty: 0,
     id: 5,
+    options: [],
   },
   {
     title: 'Vanilla Cake***',
-    price: 32,
+    price: 65,
     selected: false,
     category: 'cake',
     qty: 0,
@@ -103,7 +115,7 @@ const initialCartItems = [
   },
   {
     title: 'Chocolate Cake***',
-    price: 32,
+    price: 65,
     selected: false,
     category: 'cake',
     qty: 0,
@@ -112,7 +124,7 @@ const initialCartItems = [
   },
   {
     title: 'Lemon Cake***',
-    price: 32,
+    price: 65,
     selected: false,
     category: 'cake',
     qty: 0,
@@ -121,7 +133,7 @@ const initialCartItems = [
   },
   {
     title: 'Marble Cake',
-    price: 32,
+    price: 65,
     selected: false,
     category: 'cake',
     qty: 0,
@@ -130,7 +142,7 @@ const initialCartItems = [
   },
   {
     title: 'Funfetti Cake',
-    price: 32,
+    price: 65,
     selected: false,
     category: 'cake',
     qty: 0,
@@ -139,7 +151,7 @@ const initialCartItems = [
   },
   {
     title: 'Strawberry Cake',
-    price: 32,
+    price: 65,
     selected: false,
     category: 'cake',
     qty: 0,
@@ -148,7 +160,7 @@ const initialCartItems = [
   },
   {
     title: 'Red Velvet Cake',
-    price: 32,
+    price: 65,
     selected: false,
     category: 'cake',
     qty: 0,
@@ -157,7 +169,7 @@ const initialCartItems = [
   },
   {
     title: 'Oreo Cake',
-    price: 32,
+    price: 65,
     selected: false,
     category: 'cake',
     qty: 0,
@@ -166,7 +178,7 @@ const initialCartItems = [
   },
   {
     title: 'Carrot Cake',
-    price: 32,
+    price: 65,
     selected: false,
     category: 'cake',
     qty: 0,
@@ -180,6 +192,7 @@ const initialCartItems = [
     category: 'bakedGoods',
     qty: 0,
     id: 15,
+    options: [],
   },
   {
     title: 'Vanilla Loaf Cake',
@@ -188,6 +201,7 @@ const initialCartItems = [
     category: 'bakedGoods',
     qty: 0,
     id: 16,
+    options: [],
   },
   {
     title: 'Mini Lemon Loaf Cake',
@@ -196,6 +210,7 @@ const initialCartItems = [
     category: 'bakedGoods',
     qty: 0,
     id: 17,
+    options: [],
   },
   {
     title: 'Banana Nut Loaf Cake Bread',
@@ -204,6 +219,7 @@ const initialCartItems = [
     category: 'bakedGoods',
     qty: 0,
     id: 18,
+    options: [],
   },
   {
     title: 'Mini Banana Nut Loaf Cake Bread',
@@ -212,6 +228,7 @@ const initialCartItems = [
     category: 'bakedGoods',
     qty: 0,
     id: 19,
+    options: [],
   },
   {
     title: 'Coffee Cake',
@@ -220,6 +237,7 @@ const initialCartItems = [
     category: 'bakedGoods',
     qty: 0,
     id: 20,
+    options: [],
   },
   {
     title: 'Cheesecake (w/Fruit or Ganache)',
@@ -228,6 +246,7 @@ const initialCartItems = [
     category: 'bakedGoods',
     qty: 0,
     id: 21,
+    options: [],
   },
   {
     title: 'Lemon Bars***',
@@ -236,6 +255,7 @@ const initialCartItems = [
     category: 'dessert',
     qty: 0,
     id: 22,
+    options: [],
   },
   {
     title: 'Cheesecake Shooters***',
@@ -244,6 +264,7 @@ const initialCartItems = [
     category: 'dessert',
     qty: 0,
     id: 23,
+    options: [],
   },
   {
     title: 'Cake Pops',
@@ -252,6 +273,7 @@ const initialCartItems = [
     category: 'dessert',
     qty: 0,
     id: 24,
+    options: [],
   },
   {
     title: 'Assorted Cookies',
@@ -260,6 +282,7 @@ const initialCartItems = [
     category: 'dessert',
     qty: 0,
     id: 25,
+    options: [],
   },
   {
     title: 'Cupcakes',
@@ -268,6 +291,7 @@ const initialCartItems = [
     category: 'dessert',
     qty: 0,
     id: 26,
+    options: [],
   },
   {
     title: 'Mini Cupcakes',
@@ -276,6 +300,7 @@ const initialCartItems = [
     category: 'dessert',
     qty: 0,
     id: 27,
+    options: [],
   },
   {
     title: 'Rice Crispy Treats',
@@ -284,6 +309,7 @@ const initialCartItems = [
     category: 'dessert',
     qty: 0,
     id: 28,
+    options: [],
   },
   {
     title: 'Chocolate Covered Pretzels***',
@@ -292,6 +318,7 @@ const initialCartItems = [
     category: 'dessert',
     qty: 0,
     id: 29,
+    options: [],
   },
   {
     title: 'Fruit Tarts***',
@@ -300,6 +327,7 @@ const initialCartItems = [
     category: 'dessert',
     qty: 0,
     id: 30,
+    options: [],
   },
   {
     title: 'Cinnamon Rolls',
@@ -308,6 +336,7 @@ const initialCartItems = [
     category: 'dessert',
     qty: 0,
     id: 31,
+    options: [],
   },
   {
     title: 'Chocolate Covered Strawberries',
@@ -316,6 +345,7 @@ const initialCartItems = [
     category: 'dessert',
     qty: 0,
     id: 32,
+    options: [],
   },
   {
     title: 'Champagne Chocolate Covered Strawberries',
@@ -324,6 +354,7 @@ const initialCartItems = [
     category: 'dessert',
     qty: 0,
     id: 33,
+    options: [],
   },
 ];
 

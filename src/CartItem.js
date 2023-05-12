@@ -1,14 +1,13 @@
 import React from 'react';
-// import { options } from './Constants.js';
-
 
 /*
 TASKS: 
 - SAVE SELECT STATE OF OPTIONS IN CART ITEMS (JUST LIKE QTY)
-- UPDATING QTY WILL UPDATE HOW MANY OPTIONS LISTS WILL RENDER
 - SELECTING SPECIFIC OPTION (LIKE CAKE SIZE, WILL CHANGE CARTITEM PRICE)
+
+- UPDATING QTY WILL UPDATE HOW MANY OPTIONS LISTS WILL RENDER
 */
- 
+
 // =========== CartItem Component ===========
 const CartItem = ({
   title,
@@ -25,10 +24,6 @@ const CartItem = ({
   updateTotal,
 }) => {
   const SelectedItem = () => {
-    // const itemOptions = options.filter(
-    //   (option) => option.category === category
-    // );
-    // console.log(itemOptions);
     return (
       <>
         <button type="button" onClick={() => updateQty('-', id)}>
@@ -38,23 +33,9 @@ const CartItem = ({
         <button type="button" onClick={() => updateQty('+', id)}>
           +
         </button>
-        {/* {itemOptions.length? <br /> : ''}
-        {itemOptions.map((option) => (
-          <>
-            <input type="checkbox" value={option.value} />
-            <label>{option.title}</label>
-            <br />
-          </>
-        ))} */}
+
         {options && options.length ? <br /> : ''}
-        {/* {options &&
-          options.map((option) => (
-            <>
-              <input type="checkbox" value={option.value} />
-              <label>{option.title}</label>
-              <br />
-            </>
-          ))} */}
+
         {options &&
           options.map((option) => (
             <>
@@ -62,15 +43,18 @@ const CartItem = ({
 
               {option.options.map((opt) => (
                 <>
-                  {/*NAME CAN BE OPT.NAME OR OPTION.NAME*/}
-                  <input type="radio" id={opt.title + id} name={option.name + id} value={opt.value} />
+                  <input
+                    type="radio"
+                    id={opt.title + id}
+                    name={option.name + id}
+                    value={opt.value}
+                    onChange={() => handleOptionClick(id, opt.value)}
+                  />
                   <label htmlFor={opt.title + id}>{opt.title}</label>
                   <br />
-                  {console.log(option.name + id)}
+                  {/* {console.log(option.name + id)} */}
                 </>
               ))}
-
-              {/* <br /> */}
             </>
           ))}
       </>
