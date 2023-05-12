@@ -46,12 +46,22 @@ const CartItem = ({
                   <input
                     type="radio"
                     id={option.value}
+                    // *** WILL NEED TO DO SOMETHING ABOUT GROUP NAME.
+                    // *** IT'S GROUPING DIFFERENT CART ITEMS OPTIONS
+                    // *** WHEN NEW ITEMS GET CLICKED ON
                     name={group.name}
                     value={option.value}
                     checked={group.selected === option.value}
                     // onChange={() => handleOptionClick(id, opt.value)}
                     // handleOptionClick() will set group.selected = option.value and update the cart items
-                    onChange={() => handleOptionClick(id, group.name, option.value, option.extraCharge)}
+                    onChange={() =>
+                      handleOptionClick(
+                        id,
+                        group.name,
+                        option.value,
+                        option.extraCharge
+                      )
+                    }
                   />
                   <label htmlFor={option.value}>{option.title}</label>
                   <br />

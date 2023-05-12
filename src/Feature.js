@@ -70,6 +70,7 @@ const Feature = ({
         });
       }
     });
+
   };
 
   // Update the extra charge of group based on newly selected option
