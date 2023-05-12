@@ -16,7 +16,7 @@ const CartItem = ({
   // category,
   qty,
   id,
-  options,
+  optionGroups,
   handleCartItemClick,
   handleOptionClick,
   updateQty,
@@ -34,18 +34,34 @@ const CartItem = ({
           +
         </button>
 
-        {options && options.length ? <br /> : ''}
+        {optionGroups && optionGroups.length ? <br /> : ''}
+        {/* {console.log(optionGroups)} */}
 
-        {options &&
-          options.map((option) => (
+        {optionGroups &&
+          optionGroups.map((group) => (
             <>
-              <div>Please select your {option.name}</div>
-
-              
+              <div>Please select your {group.name}</div>
+              {console.log(group)}
+              {group.options.map(
+                (option) => (
+                  <>
+                    {/* {console.log('Options array ', options)} */}
+                    <input
+                      type="radio"
+                      id={option.value}
+                      name={group}
+                      value={option.value}
+                      // checked={ (group.selected === option.value)? }
+                      // onChange={() => handleOptionClick(id, opt.value)}
+                    />
+                    <label htmlFor={option.value}>{option.title}</label>
+                    <br />
+                  </>
+                ),
+                this
+              )}
             </>
           ))}
-
-        
       </>
     );
   };

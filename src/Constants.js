@@ -1,4 +1,4 @@
-const optionsList = [
+const allOptionGroups = [
   {
     category: 'cake',
     name: 'cake size',
@@ -55,7 +55,7 @@ const initialCartItems = [
     category: 'pie',
     qty: 0,
     id: 0,
-    options: [],
+    optionGroups: [],
   },
   {
     title: 'Sweet Potato Pie (seasonal)',
@@ -64,7 +64,7 @@ const initialCartItems = [
     category: 'pie',
     qty: 0,
     id: 1,
-    options: [],
+    optionGroups: [],
   },
   {
     title: 'Banana Cream Pie***',
@@ -73,7 +73,7 @@ const initialCartItems = [
     category: 'pie',
     qty: 0,
     id: 2,
-    options: [],
+    optionGroups: [],
   },
   {
     title: 'Peach Pie',
@@ -82,7 +82,7 @@ const initialCartItems = [
     category: 'pie',
     qty: 0,
     id: 3,
-    options: [],
+    optionGroups: [],
   },
   {
     title: 'Chocolate Snickers Pie',
@@ -91,7 +91,7 @@ const initialCartItems = [
     category: 'pie',
     qty: 0,
     id: 4,
-    options: [],
+    optionGroups: [],
   },
   {
     title: 'Mini Pies (12ct)',
@@ -100,7 +100,7 @@ const initialCartItems = [
     category: 'pie',
     qty: 0,
     id: 5,
-    options: [],
+    optionGroups: [],
   },
   {
     title: 'Vanilla Cake***',
@@ -109,7 +109,9 @@ const initialCartItems = [
     category: 'cake',
     qty: 0,
     id: 6,
-    options: optionsList.filter((option) => option.category === 'cake'),
+    optionGroups: allOptionGroups.filter(
+      (option) => option.category === 'cake'
+    ),
   },
   {
     title: 'Chocolate Cake***',
@@ -118,7 +120,9 @@ const initialCartItems = [
     category: 'cake',
     qty: 0,
     id: 7,
-    options: optionsList.filter((option) => option.category === 'cake'),
+    optionGroups: allOptionGroups.filter(
+      (option) => option.category === 'cake'
+    ),
   },
   {
     title: 'Lemon Cake***',
@@ -127,7 +131,9 @@ const initialCartItems = [
     category: 'cake',
     qty: 0,
     id: 8,
-    options: optionsList.filter((option) => option.category === 'cake'),
+    optionGroups: allOptionGroups.filter(
+      (option) => option.category === 'cake'
+    ),
   },
   {
     title: 'Marble Cake',
@@ -136,7 +142,9 @@ const initialCartItems = [
     category: 'cake',
     qty: 0,
     id: 9,
-    options: optionsList.filter((option) => option.category === 'cake'),
+    optionGroups: allOptionGroups.filter(
+      (option) => option.category === 'cake'
+    ),
   },
   {
     title: 'Funfetti Cake',
@@ -145,7 +153,9 @@ const initialCartItems = [
     category: 'cake',
     qty: 0,
     id: 10,
-    options: optionsList.filter((option) => option.category === 'cake'),
+    optionGroups: allOptionGroups.filter(
+      (option) => option.category === 'cake'
+    ),
   },
   {
     title: 'Strawberry Cake',
@@ -154,7 +164,9 @@ const initialCartItems = [
     category: 'cake',
     qty: 0,
     id: 11,
-    options: optionsList.filter((option) => option.category === 'cake'),
+    optionGroups: allOptionGroups.filter(
+      (option) => option.category === 'cake'
+    ),
   },
   {
     title: 'Red Velvet Cake',
@@ -163,7 +175,9 @@ const initialCartItems = [
     category: 'cake',
     qty: 0,
     id: 12,
-    options: optionsList.filter((option) => option.category === 'cake'),
+    optionGroups: allOptionGroups.filter(
+      (option) => option.category === 'cake'
+    ),
   },
   {
     title: 'Oreo Cake',
@@ -172,7 +186,9 @@ const initialCartItems = [
     category: 'cake',
     qty: 0,
     id: 13,
-    options: optionsList.filter((option) => option.category === 'cake'),
+    optionGroups: allOptionGroups.filter(
+      (option) => option.category === 'cake'
+    ),
   },
   {
     title: 'Carrot Cake',
@@ -181,7 +197,9 @@ const initialCartItems = [
     category: 'cake',
     qty: 0,
     id: 14,
-    options: optionsList.filter((option) => option.category === 'cake'),
+    optionGroups: allOptionGroups.filter(
+      (option) => option.category === 'cake'
+    ),
   },
   {
     title: 'Lemon Loaf Cake',
@@ -190,7 +208,7 @@ const initialCartItems = [
     category: 'bakedGoods',
     qty: 0,
     id: 15,
-    options: [],
+    optionGroups: [],
   },
   {
     title: 'Vanilla Loaf Cake',
@@ -199,7 +217,7 @@ const initialCartItems = [
     category: 'bakedGoods',
     qty: 0,
     id: 16,
-    options: [],
+    optionGroups: [],
   },
   {
     title: 'Mini Lemon Loaf Cake',
@@ -208,7 +226,7 @@ const initialCartItems = [
     category: 'bakedGoods',
     qty: 0,
     id: 17,
-    options: [],
+    optionGroups: [],
   },
   {
     title: 'Banana Nut Loaf Cake Bread',
@@ -217,7 +235,7 @@ const initialCartItems = [
     category: 'bakedGoods',
     qty: 0,
     id: 18,
-    options: [],
+    optionGroups: [],
   },
   {
     title: 'Mini Banana Nut Loaf Cake Bread',
@@ -226,7 +244,7 @@ const initialCartItems = [
     category: 'bakedGoods',
     qty: 0,
     id: 19,
-    options: [],
+    optionGroups: [],
   },
   {
     title: 'Coffee Cake',
@@ -235,7 +253,7 @@ const initialCartItems = [
     category: 'bakedGoods',
     qty: 0,
     id: 20,
-    options: [],
+    optionGroups: [],
   },
   {
     title: 'Cheesecake (w/Fruit or Ganache)',
@@ -244,7 +262,7 @@ const initialCartItems = [
     category: 'bakedGoods',
     qty: 0,
     id: 21,
-    options: [],
+    optionGroups: [],
   },
   {
     title: 'Lemon Bars***',
@@ -253,7 +271,7 @@ const initialCartItems = [
     category: 'dessert',
     qty: 0,
     id: 22,
-    options: [],
+    optionGroups: [],
   },
   {
     title: 'Cheesecake Shooters***',
@@ -262,7 +280,7 @@ const initialCartItems = [
     category: 'dessert',
     qty: 0,
     id: 23,
-    options: [],
+    optionGroups: [],
   },
   {
     title: 'Cake Pops',
@@ -271,7 +289,7 @@ const initialCartItems = [
     category: 'dessert',
     qty: 0,
     id: 24,
-    options: [],
+    optionGroups: [],
   },
   {
     title: 'Assorted Cookies',
@@ -280,7 +298,7 @@ const initialCartItems = [
     category: 'dessert',
     qty: 0,
     id: 25,
-    options: [],
+    optionGroups: [],
   },
   {
     title: 'Cupcakes',
@@ -289,7 +307,7 @@ const initialCartItems = [
     category: 'dessert',
     qty: 0,
     id: 26,
-    options: [],
+    optionGroups: [],
   },
   {
     title: 'Mini Cupcakes',
@@ -298,7 +316,7 @@ const initialCartItems = [
     category: 'dessert',
     qty: 0,
     id: 27,
-    options: [],
+    optionGroups: [],
   },
   {
     title: 'Rice Crispy Treats',
@@ -307,7 +325,7 @@ const initialCartItems = [
     category: 'dessert',
     qty: 0,
     id: 28,
-    options: [],
+    optionGroups: [],
   },
   {
     title: 'Chocolate Covered Pretzels***',
@@ -316,7 +334,7 @@ const initialCartItems = [
     category: 'dessert',
     qty: 0,
     id: 29,
-    options: [],
+    optionGroups: [],
   },
   {
     title: 'Fruit Tarts***',
@@ -325,7 +343,7 @@ const initialCartItems = [
     category: 'dessert',
     qty: 0,
     id: 30,
-    options: [],
+    optionGroups: [],
   },
   {
     title: 'Cinnamon Rolls',
@@ -334,7 +352,7 @@ const initialCartItems = [
     category: 'dessert',
     qty: 0,
     id: 31,
-    options: [],
+    optionGroups: [],
   },
   {
     title: 'Chocolate Covered Strawberries',
@@ -343,7 +361,7 @@ const initialCartItems = [
     category: 'dessert',
     qty: 0,
     id: 32,
-    options: [],
+    optionGroups: [],
   },
   {
     title: 'Champagne Chocolate Covered Strawberries',
@@ -352,7 +370,7 @@ const initialCartItems = [
     category: 'dessert',
     qty: 0,
     id: 33,
-    options: [],
+    optionGroups: [],
   },
 ];
 
