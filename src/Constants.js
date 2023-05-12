@@ -3,7 +3,7 @@ const optionsList = [
     category: 'cake',
     name: 'cake size',
     options: [
-      {
+      { 
         title: '6 inch',
         value: 'sixInch',
         extraCharge: 0,

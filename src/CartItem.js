@@ -13,19 +13,19 @@ const CartItem = ({
   title,
   price,
   selected,
-  category,
+  // category,
   qty,
   id,
   options,
   handleCartItemClick,
   handleOptionClick,
   updateQty,
-  total,
-  updateTotal,
+  // total,
+  // updateTotal,
 }) => {
   const SelectedItem = () => {
     return (
-      <>
+      <> 
         <button type="button" onClick={() => updateQty('-', id)}>
           -
         </button>
