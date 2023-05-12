@@ -2,49 +2,46 @@ const optionsList = [
   {
     category: 'cake',
     name: 'cake size',
-    selected: 'sixInch', // Default value
+    selected: 'sixInch', // Default option
+    extraCharge: 0, // Default charge
     options: [
-      {  
+      {
         title: '6 inch',
         value: 'sixInch',
         extraCharge: 0,
-        // selected: false,
       },
       {
         title: '8 inch',
         value: 'eightInch',
         extraCharge: 10,
-        // selected: false,
       },
     ],
   },
   {
     category: 'cake',
     name: 'cake filling',
+    selected: 'noBakeCheesecake', // Default option
+    extraCharge: 0, // Default charge
     options: [
       {
         title: 'No Bake Cheesecake***',
         value: 'noBakeCheesecake',
         extraCharge: 0,
-        selected: false,
       },
       {
         title: 'Chocolate Mousse***',
         value: 'chocolateMousse',
         extraCharge: 0,
-        selected: false,
       },
       {
         title: 'Vanilla Mousse',
         value: 'vanillaMousse',
         extraCharge: 0,
-        selected: false,
       },
       {
         title: 'Fruit Compote',
         value: 'fruitCompote',
         extraCharge: 0,
-        selected: false,
       },
     ],
   },
