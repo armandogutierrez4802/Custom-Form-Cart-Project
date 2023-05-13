@@ -1,6 +1,5 @@
 import React from 'react';
 import CartItem from './CartItem';
-// import Category from './Category';
 
 // =========== Cart Component ===========
 const Cart = ({
@@ -56,7 +55,6 @@ const Cart = ({
         {categories.map((category) => (
           <Category category={category} allCartItems={cartItems} />
         ))}
-        {/* <h3>Total: ${total.toFixed(2)}</h3> */}
         <h3>Total: ${getTotal()}</h3>
         <label>Special Requests:</label> <br />
         <textarea name="" id="" cols="30" rows="5"></textarea> <br />

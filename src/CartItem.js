@@ -14,7 +14,6 @@ const CartItem = ({
   title,
   price,
   selected,
-  // category,
   qty,
   id,
   optionGroups,
@@ -42,31 +41,12 @@ const CartItem = ({
 
               {group.options.map((option) => (
                 <>
-                  {/* {console.log(
-                    'id - option.value: ',
-                    `${id} - ${option.value}`
-                  )}
-                  {console.log(
-                    'id - group.selected: ',
-                    `${id} - ${group.selected}`
-                  )}
-                  {console.log('----------------------------')} */}
-                  {/* {console.log('----------------------------')} */}
-                  {/* {console.log('id - group.name', `${id}-${group.name}`)} */}
-                  {/* {console.log('group.name ', group.name)} */}
-                  {/* {console.log('----------------------------')} */}
                   <input
                     type="radio"
                     id={option.value}
-                    // id={`${id}-${option.value}`}
-                    // *** WILL NEED TO DO SOMETHING ABOUT GROUP NAME.
-                    // *** IT'S GROUPING DIFFERENT CART ITEMS OPTIONS
-                    // *** WHEN NEW ITEMS GET CLICKED ON
-                    name={`${id}-${group.name}`}
                     // name={group.name}
+                    name={`${id}-${group.name}`}
                     value={option.value}
-                    // I THINK THE PROBLEM IS WITH THE CHECKED!!!! OOORRR WITH PASSING IN THE GROUP.NAME IN OPTION CLICK HANDLER
-                    checked={group.selected === option.value}
                     checked={
                       group.selected === option.value && group.groupId === id
                     }
@@ -80,9 +60,6 @@ const CartItem = ({
                     }
                   />
                   <label htmlFor={option.value}>{option.title}</label>
-                  {/* <label htmlFor={`${id}-${option.value}`}>
-                    {option.title}
-                  </label> */}
                   <br />
                 </>
               ))}
@@ -95,6 +72,8 @@ const CartItem = ({
   const handleOnChange = () => {
     handleCartItemClick(id);
   };
+
+  // DO I NEED A STATE FOR EACH CART ITEM TO KEEP TRACK OF WHICH ITEMS ARE SELECTED ???????
 
   return (
     <>

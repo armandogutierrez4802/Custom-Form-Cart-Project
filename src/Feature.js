@@ -41,7 +41,6 @@ const Feature = ({
 
   //Helper functions
   const handleCartItemClick = (id) => {
-    //MAYBE I CAN JUST GET RID OF THIS PART AND JUST DO QTY
     const newCartItems = cartItems.map((item) => {
       if (item.id === id) {
         item.selected = !item.selected;
@@ -102,6 +101,8 @@ const Feature = ({
         }
         if (item.qty === 0) {
           item.selected = false;
+          item.price = item.basePrice;
+          // item. // cannot access default here!
         }
       }
       return item;
@@ -132,14 +133,12 @@ const Feature = ({
       <Cart
         updatePage={updatePage}
         cartItems={cartItems}
-        // options={options}
         categories={categories}
         handleCartItemClick={handleCartItemClick}
         handleOptionClick={handleOptionClick}
         updateQty={updateQty}
         specialRequest={specialRequest}
         setSpecialRequest={setSpecialRequest}
-        // total={total}
       />
     );
   } else if (page === 'checkout') {
