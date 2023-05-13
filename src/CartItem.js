@@ -52,6 +52,7 @@ const CartItem = ({
                   )}
                   {console.log('----------------------------')} */}
                   {/* {console.log('id - group.name', `${id}-${group.name}`)} */}
+                  {console.log('group.name ', group.name)}
 
                   <input
                     type="radio"
@@ -63,7 +64,7 @@ const CartItem = ({
                     name={`${id}-${group.name}`}
                     // name={group.name}
                     value={option.value}
-                    // I THINK THE PROBLEM IS WITH THE CHECKED!!!!
+                    // I THINK THE PROBLEM IS WITH THE CHECKED!!!! OOORRR WITH PASSING IN THE GROUP.NAME IN OPTION CLICK HANDLER
                     checked={group.selected === option.value}
                     onChange={() =>
                       handleOptionClick(

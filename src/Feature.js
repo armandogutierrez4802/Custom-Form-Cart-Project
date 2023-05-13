@@ -25,7 +25,7 @@ const Feature = ({
   const [page, setPage] = useState('cart');
 
   const [cartItems, setCartItems] = useState(initialCartItems);
-  const [total, setTotal] = useState(0);
+  // const [total, setTotal] = useState(0);
   const [specialRequest, setSpecialRequest] = useState('');
   const [checkoutInfo, setCheckoutInfo] = useState([]);
 
@@ -72,19 +72,26 @@ const Feature = ({
     //
     const newCartItems = cartItems.map((item) => {
       if (item.id === id) {
-        let totalOptionCharges;
+        // let totalOptionCharges = 0;
+        item.price = item.basePrice;
+        // group.totalExtraCharge = newExtraCharge;
         item.optionGroups.map((group) => {
-          totalOptionCharges = group.totalExtraCharge;
-          group.totalExtraCharge = newExtraCharge;
+          // totalOptionCharges = group.totalExtraCharge;
+          // group.totalExtraCharge = newExtraCharge;
           if (group.name === groupName) {
-            group.selected = newOptionValue;
+            group.selected = newOptionValue; // Keep this
             // item.price = item.basePrice + extraCharge;
             // item.price = item.basePrice + extraCharge;
-            totalOptionCharges += newExtraCharge;
+            // totalOptionCharges += newExtraCharge;
+            item.price = item.basePrice + newExtraCharge;
+          } else {
+            let otherSelectedOption = group.selected;
           }
+
+          group.totalExtraCharge = item.price - item.basePrice;
         });
         // console.log(sumOptionCharges);
-        item.price = item.basePrice + totalOptionCharges;
+        // item.price = item.basePrice + totalOptionCharges;
       }
       return item;
     });
@@ -169,7 +176,7 @@ const Feature = ({
         updateQty={updateQty}
         specialRequest={specialRequest}
         setSpecialRequest={setSpecialRequest}
-        total={total}
+        // total={total}
       />
     );
   } else if (page === 'checkout') {
