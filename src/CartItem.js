@@ -67,6 +67,9 @@ const CartItem = ({
                     value={option.value}
                     // I THINK THE PROBLEM IS WITH THE CHECKED!!!! OOORRR WITH PASSING IN THE GROUP.NAME IN OPTION CLICK HANDLER
                     checked={group.selected === option.value}
+                    checked={
+                      group.selected === option.value && group.groupId === id
+                    }
                     onChange={() =>
                       handleOptionClick(
                         id,

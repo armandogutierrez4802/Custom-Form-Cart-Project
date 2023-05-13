@@ -60,44 +60,6 @@ const Feature = ({
   };
 
   const handleOptionClick = (id, groupName, newOptionValue, newExtraCharge) => {
-    // Update the selected option in group with the value of the selected option
-    // Update the extra charge of group based on newly selected option
-
-    // Do it in parallel, I have access to my current cart state via cartItems.map => (item)
-    // I also have access to my new stuff via the parameters
-    // How about I take the old price stored in cartItems state, and find the difference between
-    // that and the new price I generate here....maybe I can do cartItems.reduce and sum up the base
-    // price with the all current selected options
-    // Then generate my newCartItems with newly selected values (might not work)
-    /*
-    const newCartItems = cartItems.map((item) => {
-      if (item.id === id) {
-        // let totalOptionCharges = 0;
-        item.price = item.basePrice;
-        // group.totalExtraCharge = newExtraCharge;
-        item.optionGroups.map((group) => {
-          // totalOptionCharges = group.totalExtraCharge;
-          // group.totalExtraCharge = newExtraCharge;
-          if (group.name === groupName) {
-            group.selected = newOptionValue; // Keep this
-            // item.price = item.basePrice + extraCharge;
-            // item.price = item.basePrice + extraCharge;
-            // totalOptionCharges += newExtraCharge;
-            item.price = item.basePrice + newExtraCharge;
-          } else {
-            let otherSelectedOption = group.selected;
-          }
-
-          group.totalExtraCharge = item.price - item.basePrice;
-        });
-        // console.log(sumOptionCharges);
-        // item.price = item.basePrice + totalOptionCharges;
-      }
-      return item;
-    });
-
-    */
-
     const newCartItems = cartItems.map((item) => {
       let newTotal;
       //Find the item that we selected
@@ -118,6 +80,8 @@ const Feature = ({
             // Then add the extra charge from the current group
             newTotal += group.extraCharge;
           }
+          // Update group's id with the item's id
+          group.groupId = item.id;
         });
         // Update item's price with newTotal accounting for all selected options
         item.price = newTotal;

@@ -20,7 +20,7 @@ const Cart = ({
     const items = allCartItems.filter(
       (item) => item.category === category.value
     );
- 
+
     return (
       <>
         <h3>{category.title}</h3>

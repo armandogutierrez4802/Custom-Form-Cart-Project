@@ -4,9 +4,10 @@ const allOptionGroups = [
     name: 'cake size',
     selected: 'sixInch', // Selected option
     extraCharge: 0, // Group's extra charge based on selected option
+    groupId: -1, // This will be the same as the item's id to fix each option's checked state
     options: [
       {
-        title: '6 inch',
+        title: `6 inch`,
         value: 'sixInch',
         optExtraCharge: 0,
       },
@@ -22,6 +23,7 @@ const allOptionGroups = [
     name: 'cake filling',
     selected: 'noBakeCheesecake', // Default option
     extraCharge: 0, // Default charge
+    groupId: -1,
     options: [
       {
         title: 'No Bake Cheesecake***',
@@ -41,7 +43,7 @@ const allOptionGroups = [
       {
         title: 'Fruit Compote',
         value: 'fruitCompote',
-        optExtraCharge: 5,
+        optExtraCharge: 0,
       },
     ],
   },
