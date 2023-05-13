@@ -60,17 +60,23 @@ const Feature = ({
     setCartItems(newCartItems);
   };
 
-  const handleOptionClick = (id, groupName, optionValue, extraCharge) => {
+  const handleOptionClick = (
+    id,
+    groupName,
+    optionValue,
+    extraCharge,
+    prevPrice
+  ) => {
     // Update the selected option in group with the value of the selected option
     // Update the extra charge of group based on newly selected option
-
+    console.log('prevPrice ', prevPrice);
     const newCartItems = cartItems.map((item) => {
       if (item.id === id) {
         item.optionGroups.map((group) => {
           if (group.name === groupName) {
             group.selected = optionValue;
             console.log(extraCharge);
-            item.price = item.price + extraCharge;
+            item.price = prevPrice + extraCharge;
           }
         });
       }

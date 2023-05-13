@@ -57,14 +57,17 @@ const CartItem = ({
                     checked={group.selected === option.value}
                     // onChange={() => handleOptionClick(id, opt.value)}
                     // handleOptionClick() will set group.selected = option.value and update the cart items
-                    onChange={() =>
+                    onChange={(e) => {
+                      console.log(e);
+                      // const prevPrice
                       handleOptionClick(
                         id,
                         group.name,
                         option.value,
-                        option.optExtraCharge
-                      )
-                    }
+                        option.optExtraCharge,
+                        price
+                      );
+                    }}
                   />
                   <label htmlFor={option.value}>{option.title}</label>
                   <br />

@@ -105,6 +105,8 @@ const initialCartItems = [
   {
     title: 'Vanilla Cake***',
     price: 65,
+    // basePrice: 65,
+    // price: 0,
     selected: false,
     category: 'cake',
     qty: 0,
