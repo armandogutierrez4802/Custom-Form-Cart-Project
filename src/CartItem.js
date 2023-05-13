@@ -3,9 +3,10 @@ import React from 'react';
 /*
 TASKS: 
 - SAVE SELECT STATE OF OPTIONS IN CART ITEMS (JUST LIKE QTY)
-- SELECTING SPECIFIC OPTION (LIKE CAKE SIZE, WILL CHANGE CARTITEM PRICE)
-
 - UPDATING QTY WILL UPDATE HOW MANY OPTIONS LISTS WILL RENDER
+
+
+X SELECTING SPECIFIC OPTION (LIKE CAKE SIZE, WILL CHANGE CARTITEM PRICE)
 */
 
 // =========== CartItem Component ===========
@@ -43,33 +44,42 @@ const CartItem = ({
 
               {group.options.map((option) => (
                 <>
-                  {/* {console.log('item id = id = ', id)}
-                  {console.log('id = option.value = ', option.value)}
-                  {console.log('name = group.value = ', group.name)} */}
+                  {/* {console.log(
+                    'id - option.value: ',
+                    `${id} - ${option.value}`
+                  )}
+                  {console.log(
+                    'id - group.selected: ',
+                    `${id} - ${group.selected}`
+                  )}
+                  {console.log('----------------------------')} */}
+                  {/* {console.log('id - group.name', `${id}-${group.name}`)} */}
+
                   <input
                     type="radio"
                     id={option.value}
+                    // id={`${id}-${option.value}`}
                     // *** WILL NEED TO DO SOMETHING ABOUT GROUP NAME.
                     // *** IT'S GROUPING DIFFERENT CART ITEMS OPTIONS
                     // *** WHEN NEW ITEMS GET CLICKED ON
-                    name={group.name}
+                    name={`${id}-${group.name}`}
+                    // name={group.name}
                     value={option.value}
+                    // I THINK THE PROBLEM IS WITH THE CHECKED!!!!
                     checked={group.selected === option.value}
-                    // onChange={() => handleOptionClick(id, opt.value)}
-                    // handleOptionClick() will set group.selected = option.value and update the cart items
-                    onChange={(e) => {
-                      console.log(e);
-                      // const prevPrice
+                    onChange={() =>
                       handleOptionClick(
                         id,
                         group.name,
                         option.value,
-                        option.optExtraCharge,
-                        // price
-                      );
-                    }}
+                        option.optExtraCharge
+                      )
+                    }
                   />
                   <label htmlFor={option.value}>{option.title}</label>
+                  {/* <label htmlFor={`${id}-${option.value}`}>
+                    {option.title}
+                  </label> */}
                   <br />
                 </>
               ))}
@@ -101,29 +111,3 @@ const CartItem = ({
 };
 
 export default CartItem;
-
-/*
-
-{options &&
-          options.map((option) => (
-            <>
-              <div>Please select your {option.name}</div>
-
-              {option.options.map((opt) => (
-                <>
-                  <input
-                    type="radio"
-                    id={opt.title + id}
-                    name={option.name}
-                    value={opt.value}
-                    checked={selected}
-                    onChange={() => handleOptionClick(id, opt.value)}
-                  />
-                  <label htmlFor={opt.title + id}>{opt.title}</label>
-                  <br />
-                </>
-              ))}
-            </>
-          ))}
-
-*/

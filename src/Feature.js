@@ -22,7 +22,7 @@ const Feature = ({
   //States
   // const [page, setPage] = useState(initialPage);
   // const [page, setPage] = useState(localStorage.getItem('page'));
-  const [page, setPage] = useState('start');
+  const [page, setPage] = useState('cart');
 
   const [cartItems, setCartItems] = useState(initialCartItems);
   const [total, setTotal] = useState(0);
@@ -60,29 +60,29 @@ const Feature = ({
     setCartItems(newCartItems);
   };
 
-  const handleOptionClick = (
-    id,
-    groupName,
-    optionValue,
-    extraCharge
-    // prevPrice
-  ) => {
+  const handleOptionClick = (id, groupName, newOptionValue, newExtraCharge) => {
     // Update the selected option in group with the value of the selected option
     // Update the extra charge of group based on newly selected option
     const newCartItems = cartItems.map((item) => {
       if (item.id === id) {
+        let totalOptionCharges = 0;
         item.optionGroups.map((group) => {
+          totalOptionCharges += group.totalExtraCharge;
+          group.totalExtraCharge = newExtraCharge;
           if (group.name === groupName) {
-            group.selected = optionValue;
-            // console.log(extraCharge);
-            item.price = item.basePrice + extraCharge;
+            group.selected = newOptionValue;
+            // item.price = item.basePrice + extraCharge;
+            // item.price = item.basePrice + extraCharge;
+            totalOptionCharges += newExtraCharge;
           }
         });
+        // console.log(sumOptionCharges);
+        item.price = item.basePrice + totalOptionCharges;
       }
       return item;
     });
 
-    // updateTotal();
+    updateTotal();
     setCartItems(newCartItems);
   };
 

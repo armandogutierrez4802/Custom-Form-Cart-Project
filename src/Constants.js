@@ -3,7 +3,7 @@ const allOptionGroups = [
     category: 'cake',
     name: 'cake size',
     selected: 'sixInch', // Selected option
-    extraCharge: 0,
+    totalExtraCharge: 0,
     options: [
       {
         title: '6 inch',
