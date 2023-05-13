@@ -5,16 +5,15 @@ import CartItem from './CartItem';
 // =========== Cart Component ===========
 const Cart = ({
   updatePage,
-  cartItems, 
-  // options, 
+  cartItems,
+  // options,
   categories,
   handleCartItemClick,
   handleOptionClick,
   updateQty,
   specialRequest,
   setSpecialRequest,
-  total,
-  updateTotal,
+  // total,
 }) => {
   // =========== Category Component ===========
   const Category = ({ category, allCartItems }) => {
@@ -37,12 +36,17 @@ const Cart = ({
             handleCartItemClick={handleCartItemClick}
             handleOptionClick={handleOptionClick}
             updateQty={updateQty}
-            total={total}
-            updateTotal={updateTotal}
           />
         ))}
       </>
     );
+  };
+
+  const getTotal = () => {
+    const selectedItems = cartItems.filter((item) => item.selected === true);
+    const allItemTotals = selectedItems.map((item) => item.price * item.qty);
+    const newTotal = allItemTotals.reduce((prev, curr) => prev + curr, 0);
+    return newTotal.toFixed(2);
   };
 
   return (
@@ -52,7 +56,8 @@ const Cart = ({
         {categories.map((category) => (
           <Category category={category} allCartItems={cartItems} />
         ))}
-        <h3>Total: ${total.toFixed(2)}</h3>
+        {/* <h3>Total: ${total.toFixed(2)}</h3> */}
+        <h3>Total: ${getTotal()}</h3>
         <label>Special Requests:</label> <br />
         <textarea name="" id="" cols="30" rows="5"></textarea> <br />
         <button type="button" onClick={() => updatePage('checkout')}>

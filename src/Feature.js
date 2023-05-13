@@ -56,7 +56,6 @@ const Feature = ({
       }
       return item;
     });
-    updateTotal();
     setCartItems(newCartItems);
   };
 
@@ -90,7 +89,6 @@ const Feature = ({
       return item;
     });
 
-    updateTotal();
     setCartItems(newCartItems);
   };
 
@@ -121,7 +119,6 @@ const Feature = ({
   //     }
   //     return item;
   //   });
-  //   // updateTotal();
   //   setCartItems(newCartItems);
   // };
 
@@ -139,15 +136,7 @@ const Feature = ({
       }
       return item;
     });
-    updateTotal();
     setCartItems(newCartItems);
-  };
-
-  const updateTotal = () => {
-    const selectedItems = cartItems.filter((item) => item.selected === true);
-    const allItemTotals = selectedItems.map((item) => item.price * item.qty);
-    const newTotal = allItemTotals.reduce((prev, curr) => prev + curr, 0);
-    setTotal(newTotal);
   };
 
   const submitForm = (e) => {
@@ -181,7 +170,6 @@ const Feature = ({
         specialRequest={specialRequest}
         setSpecialRequest={setSpecialRequest}
         total={total}
-        updateTotal={updateTotal}
       />
     );
   } else if (page === 'checkout') {

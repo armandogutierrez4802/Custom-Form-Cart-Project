@@ -21,8 +21,6 @@ const CartItem = ({
   handleCartItemClick,
   handleOptionClick,
   updateQty,
-  // total,
-  // updateTotal,
 }) => {
   const SelectedItem = () => {
     return (
