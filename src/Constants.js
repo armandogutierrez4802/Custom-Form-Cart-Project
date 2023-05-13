@@ -3,7 +3,7 @@ const allOptionGroups = [
     category: 'cake',
     name: 'cake size',
     selected: 'sixInch', // Selected option
-    totalExtraCharge: 0,
+    extraCharge: 0, // Group's extra charge based on selected option
     options: [
       {
         title: '6 inch',
@@ -21,7 +21,7 @@ const allOptionGroups = [
     category: 'cake',
     name: 'cake filling',
     selected: 'noBakeCheesecake', // Default option
-    totalExtraCharge: 0, // Default charge
+    extraCharge: 0, // Default charge
     options: [
       {
         title: 'No Bake Cheesecake***',
@@ -41,7 +41,7 @@ const allOptionGroups = [
       {
         title: 'Fruit Compote',
         value: 'fruitCompote',
-        optExtraCharge: 0,
+        optExtraCharge: 5,
       },
     ],
   },

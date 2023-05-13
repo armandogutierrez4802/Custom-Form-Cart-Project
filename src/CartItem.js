@@ -51,9 +51,10 @@ const CartItem = ({
                     `${id} - ${group.selected}`
                   )}
                   {console.log('----------------------------')} */}
+                  {/* {console.log('----------------------------')} */}
                   {/* {console.log('id - group.name', `${id}-${group.name}`)} */}
-                  {console.log('group.name ', group.name)}
-
+                  {/* {console.log('group.name ', group.name)} */}
+                  {/* {console.log('----------------------------')} */}
                   <input
                     type="radio"
                     id={option.value}

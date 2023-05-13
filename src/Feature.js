@@ -69,7 +69,7 @@ const Feature = ({
     // that and the new price I generate here....maybe I can do cartItems.reduce and sum up the base
     // price with the all current selected options
     // Then generate my newCartItems with newly selected values (might not work)
-    //
+    /*
     const newCartItems = cartItems.map((item) => {
       if (item.id === id) {
         // let totalOptionCharges = 0;
@@ -96,38 +96,37 @@ const Feature = ({
       return item;
     });
 
+    */
+
+    const newCartItems = cartItems.map((item) => {
+      let newTotal;
+      //Find the item that we selected
+      if (item.id === id) {
+        // Start with base price
+        newTotal = item.basePrice;
+        // Go through each group of options (Ex. size, filling, etc)
+        item.optionGroups.map((group) => {
+          //If we are in the group that we changed
+          if (group.name === groupName) {
+            // Update group's selected value
+            group.selected = newOptionValue;
+            // Update group's extra charge based on selected value
+            group.extraCharge = newExtraCharge;
+            newTotal += newExtraCharge;
+          } else {
+            // If not in the group we changed
+            // Then add the extra charge from the current group
+            newTotal += group.extraCharge;
+          }
+        });
+        // Update item's price with newTotal accounting for all selected options
+        item.price = newTotal;
+      }
+      return item;
+    });
+
     setCartItems(newCartItems);
   };
-
-  // const handleOptionClick = (id, optValue) => {
-  // We need the id and the value of the radio button
-  // console.log('id ', id);
-  // console.log('opt.value ', optValue);
-  // For each item
-  // if item id matches
-  // then map through their options
-  // if value matches, then check
-  // if selected = true, then selected = false, vice versa
-  // ALSO check if option has additional price, so we can let item.price = item.price + optionAdditionalCharge)
-  // (This means each option will probably need a hasCharge boolean property)
-  // (If hasCharge is true, then add that extra charge as mentioned above)
-  // return the item, then setCartItems like in handleCartItemClick()
-  //   const newCartItems = cartItems.map((item) => {
-  //     if (item.id === id) {
-  //       console.log('item ', item);
-  //       item.options.map((option) => {
-  //         option.options.map((opt) => {
-  //           if (opt.value === optValue) {
-  //             opt.selected = !opt.selected;
-  //             console.log(`${opt.value}.selected = `, opt.selected);
-  //           }
-  //         });
-  //       });
-  //     }
-  //     return item;
-  //   });
-  //   setCartItems(newCartItems);
-  // };
 
   const updateQty = (operator, id) => {
     const newCartItems = cartItems.map((item) => {
