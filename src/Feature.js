@@ -62,18 +62,24 @@ const Feature = ({
 
   const handleOptionClick = (id, groupName, optionValue, extraCharge) => {
     // Update the selected option in group with the value of the selected option
+    // Update the extra charge of group based on newly selected option
+
     const newCartItems = cartItems.map((item) => {
       if (item.id === id) {
         item.optionGroups.map((group) => {
           if (group.name === groupName) {
+            group.selected = optionValue;
+            console.log(extraCharge);
+            item.price = item.price + extraCharge;
           }
         });
       }
+      return item;
     });
 
+    // updateTotal();
+    setCartItems(newCartItems);
   };
-
-  // Update the extra charge of group based on newly selected option
 
   // const handleOptionClick = (id, optValue) => {
   // We need the id and the value of the radio button

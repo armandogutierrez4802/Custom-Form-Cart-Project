@@ -40,9 +40,12 @@ const CartItem = ({
           optionGroups.map((group) => (
             <>
               <div>Please select your {group.name}</div>
-              {console.log(group)}
+
               {group.options.map((option) => (
                 <>
+                  {/* {console.log('item id = id = ', id)}
+                  {console.log('id = option.value = ', option.value)}
+                  {console.log('name = group.value = ', group.name)} */}
                   <input
                     type="radio"
                     id={option.value}
@@ -59,7 +62,7 @@ const CartItem = ({
                         id,
                         group.name,
                         option.value,
-                        option.extraCharge
+                        option.optExtraCharge
                       )
                     }
                   />

@@ -5,7 +5,7 @@ import CartItem from './CartItem';
 // =========== Cart Component ===========
 const Cart = ({
   updatePage,
-  cartItems,
+  cartItems, 
   // options,
   categories,
   handleCartItemClick,
