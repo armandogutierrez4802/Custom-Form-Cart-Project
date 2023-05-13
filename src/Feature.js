@@ -13,7 +13,7 @@ const Feature = ({
   pickupTimes,
   paymentMethods,
 }) => {
-  // const localData = localStorage.getItem('page');
+  // const localData = localStorage.getItem(' page');
   // const initialPage = localData ? JSON.parse(localData) : 'start';
 
   // console.log(localData);
@@ -64,19 +64,18 @@ const Feature = ({
     id,
     groupName,
     optionValue,
-    extraCharge,
-    prevPrice
+    extraCharge
+    // prevPrice
   ) => {
     // Update the selected option in group with the value of the selected option
     // Update the extra charge of group based on newly selected option
-    console.log('prevPrice ', prevPrice);
     const newCartItems = cartItems.map((item) => {
       if (item.id === id) {
         item.optionGroups.map((group) => {
           if (group.name === groupName) {
             group.selected = optionValue;
-            console.log(extraCharge);
-            item.price = prevPrice + extraCharge;
+            // console.log(extraCharge);
+            item.price = item.basePrice + extraCharge;
           }
         });
       }

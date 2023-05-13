@@ -6,7 +6,7 @@ import CartItem from './CartItem';
 const Cart = ({
   updatePage,
   cartItems, 
-  // options,
+  // options, 
   categories,
   handleCartItemClick,
   handleOptionClick,

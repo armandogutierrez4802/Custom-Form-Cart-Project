@@ -65,7 +65,7 @@ const CartItem = ({
                         group.name,
                         option.value,
                         option.optExtraCharge,
-                        price
+                        // price
                       );
                     }}
                   />

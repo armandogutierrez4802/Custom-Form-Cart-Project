@@ -50,7 +50,8 @@ const allOptionGroups = [
 const initialCartItems = [
   {
     title: 'Apple Pie***',
-    price: 20,
+    basePrice: 20, //Base price without additional options
+    price: 20, // Price including additional options
     selected: false,
     category: 'pie',
     qty: 0,
@@ -59,6 +60,7 @@ const initialCartItems = [
   },
   {
     title: 'Sweet Potato Pie (seasonal)',
+    basePrice: 16,
     price: 16,
     selected: false,
     category: 'pie',
@@ -68,6 +70,7 @@ const initialCartItems = [
   },
   {
     title: 'Banana Cream Pie***',
+    basePrice: 18,
     price: 18,
     selected: false,
     category: 'pie',
@@ -77,6 +80,7 @@ const initialCartItems = [
   },
   {
     title: 'Peach Pie',
+    basePrice: 1000,
     price: 1000,
     selected: false,
     category: 'pie',
@@ -86,6 +90,7 @@ const initialCartItems = [
   },
   {
     title: 'Chocolate Snickers Pie',
+    basePrice: 1000,
     price: 1000,
     selected: false,
     category: 'pie',
@@ -95,6 +100,7 @@ const initialCartItems = [
   },
   {
     title: 'Mini Pies (12ct)',
+    basePrice: 15,
     price: 15,
     selected: false,
     category: 'pie',
@@ -104,9 +110,8 @@ const initialCartItems = [
   },
   {
     title: 'Vanilla Cake***',
+    basePrice: 65,
     price: 65,
-    // basePrice: 65,
-    // price: 0,
     selected: false,
     category: 'cake',
     qty: 0,
@@ -117,6 +122,7 @@ const initialCartItems = [
   },
   {
     title: 'Chocolate Cake***',
+    basePrice: 65,
     price: 65,
     selected: false,
     category: 'cake',
@@ -128,6 +134,7 @@ const initialCartItems = [
   },
   {
     title: 'Lemon Cake***',
+    basePrice: 65,
     price: 65,
     selected: false,
     category: 'cake',
@@ -139,6 +146,7 @@ const initialCartItems = [
   },
   {
     title: 'Marble Cake',
+    basePrice: 65,
     price: 65,
     selected: false,
     category: 'cake',
@@ -150,6 +158,7 @@ const initialCartItems = [
   },
   {
     title: 'Funfetti Cake',
+    basePrice: 65,
     price: 65,
     selected: false,
     category: 'cake',
@@ -161,6 +170,7 @@ const initialCartItems = [
   },
   {
     title: 'Strawberry Cake',
+    basePrice: 65,
     price: 65,
     selected: false,
     category: 'cake',
@@ -172,6 +182,7 @@ const initialCartItems = [
   },
   {
     title: 'Red Velvet Cake',
+    basePrice: 65,
     price: 65,
     selected: false,
     category: 'cake',
@@ -183,6 +194,7 @@ const initialCartItems = [
   },
   {
     title: 'Oreo Cake',
+    basePrice: 65,
     price: 65,
     selected: false,
     category: 'cake',
@@ -194,6 +206,7 @@ const initialCartItems = [
   },
   {
     title: 'Carrot Cake',
+    basePrice: 65,
     price: 65,
     selected: false,
     category: 'cake',
@@ -205,6 +218,7 @@ const initialCartItems = [
   },
   {
     title: 'Lemon Loaf Cake',
+    basePrice: 32,
     price: 32,
     selected: false,
     category: 'bakedGoods',
@@ -214,6 +228,7 @@ const initialCartItems = [
   },
   {
     title: 'Vanilla Loaf Cake',
+    basePrice: 32,
     price: 32,
     selected: false,
     category: 'bakedGoods',
@@ -223,6 +238,7 @@ const initialCartItems = [
   },
   {
     title: 'Mini Lemon Loaf Cake',
+    basePrice: 32,
     price: 32,
     selected: false,
     category: 'bakedGoods',
@@ -232,6 +248,7 @@ const initialCartItems = [
   },
   {
     title: 'Banana Nut Loaf Cake Bread',
+    basePrice: 28,
     price: 28,
     selected: false,
     category: 'bakedGoods',
@@ -241,6 +258,7 @@ const initialCartItems = [
   },
   {
     title: 'Mini Banana Nut Loaf Cake Bread',
+    basePrice: 6,
     price: 6,
     selected: false,
     category: 'bakedGoods',
@@ -250,6 +268,7 @@ const initialCartItems = [
   },
   {
     title: 'Coffee Cake',
+    basePrice: 35,
     price: 35,
     selected: false,
     category: 'bakedGoods',
@@ -259,6 +278,7 @@ const initialCartItems = [
   },
   {
     title: 'Cheesecake (w/Fruit or Ganache)',
+    basePrice: 35,
     price: 35,
     selected: false,
     category: 'bakedGoods',
@@ -268,6 +288,7 @@ const initialCartItems = [
   },
   {
     title: 'Lemon Bars***',
+    basePrice: 1000,
     price: 1000,
     selected: false,
     category: 'dessert',
@@ -277,6 +298,7 @@ const initialCartItems = [
   },
   {
     title: 'Cheesecake Shooters***',
+    basePrice: 1000,
     price: 1000,
     selected: false,
     category: 'dessert',
@@ -286,6 +308,7 @@ const initialCartItems = [
   },
   {
     title: 'Cake Pops',
+    basePrice: 1000,
     price: 1000,
     selected: false,
     category: 'dessert',
@@ -295,6 +318,7 @@ const initialCartItems = [
   },
   {
     title: 'Assorted Cookies',
+    basePrice: 1000,
     price: 1000,
     selected: false,
     category: 'dessert',
@@ -304,6 +328,7 @@ const initialCartItems = [
   },
   {
     title: 'Cupcakes',
+    basePrice: 1000,
     price: 1000,
     selected: false,
     category: 'dessert',
@@ -313,6 +338,7 @@ const initialCartItems = [
   },
   {
     title: 'Mini Cupcakes',
+    basePrice: 1000,
     price: 1000,
     selected: false,
     category: 'dessert',
@@ -322,6 +348,7 @@ const initialCartItems = [
   },
   {
     title: 'Rice Crispy Treats',
+    basePrice: 1000,
     price: 1000,
     selected: false,
     category: 'dessert',
@@ -331,6 +358,7 @@ const initialCartItems = [
   },
   {
     title: 'Chocolate Covered Pretzels***',
+    basePrice: 1000,
     price: 1000,
     selected: false,
     category: 'dessert',
@@ -340,6 +368,7 @@ const initialCartItems = [
   },
   {
     title: 'Fruit Tarts***',
+    basePrice: 1000,
     price: 1000,
     selected: false,
     category: 'dessert',
@@ -349,6 +378,7 @@ const initialCartItems = [
   },
   {
     title: 'Cinnamon Rolls',
+    basePrice: 1000,
     price: 1000,
     selected: false,
     category: 'dessert',
@@ -358,6 +388,7 @@ const initialCartItems = [
   },
   {
     title: 'Chocolate Covered Strawberries',
+    basePrice: 1000,
     price: 1000,
     selected: false,
     category: 'dessert',
@@ -367,6 +398,7 @@ const initialCartItems = [
   },
   {
     title: 'Champagne Chocolate Covered Strawberries',
+    basePrice: 1000,
     price: 1000,
     selected: false,
     category: 'dessert',
