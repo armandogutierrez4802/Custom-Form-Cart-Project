@@ -63,11 +63,19 @@ const Feature = ({
   const handleOptionClick = (id, groupName, newOptionValue, newExtraCharge) => {
     // Update the selected option in group with the value of the selected option
     // Update the extra charge of group based on newly selected option
+
+    // Do it in parallel, I have access to my current cart state via cartItems.map => (item)
+    // I also have access to my new stuff via the parameters
+    // How about I take the old price stored in cartItems state, and find the difference between
+    // that and the new price I generate here....maybe I can do cartItems.reduce and sum up the base
+    // price with the all current selected options
+    // Then generate my newCartItems with newly selected values (might not work)
+    //
     const newCartItems = cartItems.map((item) => {
       if (item.id === id) {
-        let totalOptionCharges = 0;
+        let totalOptionCharges;
         item.optionGroups.map((group) => {
-          totalOptionCharges += group.totalExtraCharge;
+          totalOptionCharges = group.totalExtraCharge;
           group.totalExtraCharge = newExtraCharge;
           if (group.name === groupName) {
             group.selected = newOptionValue;

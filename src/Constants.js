@@ -21,7 +21,7 @@ const allOptionGroups = [
     category: 'cake',
     name: 'cake filling',
     selected: 'noBakeCheesecake', // Default option
-    extraCharge: 0, // Default charge
+    totalExtraCharge: 0, // Default charge
     options: [
       {
         title: 'No Bake Cheesecake***',
