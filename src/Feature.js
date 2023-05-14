@@ -22,7 +22,7 @@ const Feature = ({
   //States
   // const [page, setPage] = useState(initialPage);
   // const [page, setPage] = useState(localStorage.getItem('page'));
-  const [page, setPage] = useState('cart');
+  const [page, setPage] = useState('start');
 
   const [cartItems, setCartItems] = useState(initialCartItems);
   // const [total, setTotal] = useState(0);
